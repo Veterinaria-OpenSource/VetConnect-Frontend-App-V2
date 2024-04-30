@@ -25,18 +25,23 @@ import { CardComponent } from './public/components/card/card.component';
 import { ListCentersComponent } from './user-pet/components/list-centers/list-centers.component';
 
 // paginas del dominio user-pet
+import { FormsModule } from '@angular/forms';
+import { MatFormField, MatLabel } from '@angular/material/form-field';
+import { MatInput } from '@angular/material/input';
+import {
+  MatStep,
+  MatStepLabel,
+  MatStepper,
+  MatStepperNext,
+} from '@angular/material/stepper';
 import { TimeCardComponent } from './public/components/time-card/time-card.component';
+import { ConfirmationCardComponent } from './user-pet/components/confirmation-card/confirmation-card.component';
+import { InfoServiceCardComponent } from './user-pet/components/info-service-card/info-service-card.component';
+import { PaymentFormCardComponent } from './user-pet/components/payment-form-card/payment-form-card.component';
 import { HomeComponent } from './user-pet/pages/home/home.component';
+import { PaymentComponent } from './user-pet/pages/payment/payment.component';
 import { VetCenterDetailComponent } from './user-pet/pages/vet-center-detail/vet-center-detail.component';
 import { VetCenterService } from './user-pet/services/vet-center.service';
-import { PaymentComponent } from './user-pet/pages/payment/payment/payment.component';
-import { InfoServiceCardComponent } from './user-pet/components/info-service-card/info-service-card.component';
-import {FormsModule} from "@angular/forms";
-import {MatStep, MatStepLabel, MatStepper, MatStepperNext} from "@angular/material/stepper";
-import { PaymentFormCardComponent } from './user-pet/components/payment-form-card/payment-form-card.component';
-import { ConfirmationCardComponent } from './user-pet/components/confirmation-card/confirmation-card.component';
-import {MatFormField, MatLabel} from "@angular/material/form-field";
-import {MatInput} from "@angular/material/input";
 
 // funcion para cargar los archivos de idioma
 export function createTranslateLoader(http: HttpClient) {
