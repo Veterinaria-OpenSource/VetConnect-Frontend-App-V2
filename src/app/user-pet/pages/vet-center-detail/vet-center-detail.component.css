@@ -43,7 +43,6 @@
   padding: 2rem;
   background-color: var(--kt-bg-card); /* Ajusta el color de fondo según tu paleta de colores */
   box-shadow: var(--kt-bg-dark) 0 0 4px;
-  margin-top: 4rem;
   max-width: 82rem;
 }
 
