@@ -1,0 +1,17 @@
+mat-toolbar {
+  background-color: #196C58;
+}
+
+mat-icon {
+  color: white;
+}
+
+mat-toolbar-row {
+  justify-content: space-between;
+}
+
+.title-toolbar {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+}
