@@ -1,0 +1,37 @@
+.example-card {
+  max-width: 400px;
+  padding: 2rem 4rem;
+  background-color: var(--kt-bg-card);
+  box-shadow: var(--kt-bg-dark) 0 0 4px;
+}
+
+.mat-mdc-card-header {
+  padding: 0;
+}
+
+.mat-mdc-card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0 1rem 0;
+
+  & p {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.mat-mdc-card-content:last-child {
+  padding-bottom: auto;
+}
+
+.btn {
+  background-color: var(--kt-bg-green);
+}
+
+.mat-mdc-outlined-button:not(:disabled) {
+  color: var(--kt-bg-light);
+  padding: 2rem;
+}
+
+.mdc-card__actions {
+  padding: 1rem 0;
+}

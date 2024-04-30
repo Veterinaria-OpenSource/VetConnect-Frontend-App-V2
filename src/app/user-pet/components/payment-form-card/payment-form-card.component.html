@@ -1,0 +1,58 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div style="display: flex; justify-content: center; width: 100%">
+      <mat-card-title>Confirmación de Pago</mat-card-title>
+    </div>
+  </mat-card-header>
+
+  <mat-card-content>
+    <img src="../../../../assets/svgs/payment/credit%20cards.svg" />
+    <div class="info-service">
+      <div class="info-service-content">
+        <div style="display: flex; flex-direction: column">
+          <mat-form-field>
+            <mat-label>CARD NUMBER</mat-label>
+            <input matInput />
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>NAME ON CARD</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </div>
+        <div style="display: flex; flex-direction: row; gap: 0.5em">
+          <mat-form-field>
+            <mat-label>EXP DATE</mat-label>
+            <input
+              maxlength="5"
+              pattern="(0[1-9]|1[0-2])\/\d{2}"
+              placeholder="MM/YY"
+              required
+              matInput
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>CVV</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0.5em;
+      "
+    >
+      <button
+        aria-label="Pagar"
+        class="button-confirm"
+        mat-raised-button
+        matStepperNext
+      >
+        Pagar
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>

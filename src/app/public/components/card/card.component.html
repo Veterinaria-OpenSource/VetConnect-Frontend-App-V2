@@ -1,0 +1,30 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{ vetCenter.clinicName }}</mat-card-title>
+    <mat-card-subtitle>***** 233 Reviews</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="vetCenter.image" [alt]="vetCenter.clinicName" />
+  <mat-card-content>
+    <p>Address: {{ vetCenter.direction }}</p>
+    <p>
+      <span>Clinical Consultation</span>
+      <span>Price: S/. {{ vetCenter.clinicalPrice }}</span>
+    </p>
+    <p>
+      <span>Bathroom</span>
+      <span>Price: S/. {{ vetCenter.bathprice }}</span>
+    </p>
+  </mat-card-content>
+  <mat-card-actions style="display: flex; gap: 3rem; justify-content: center">
+    <a
+      mat-stroked-button
+      class="btn"
+      [routerLink]="isOnMainRoute() ? '/vet-centers/' + vetCenter.id : '/home'"
+    >
+      {{ isOnMainRoute() ? "See More" : "Go Back" }}
+    </a>
+    <a mat-stroked-button class="btn" [routerLink]="'/payment/' + vetCenter.id">
+      Payment
+    </a>
+  </mat-card-actions>
+</mat-card>

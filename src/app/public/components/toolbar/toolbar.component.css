@@ -1,5 +1,5 @@
 mat-toolbar {
-  background-color: #196C58;
+  background-color: var(--kt-bg-green);
 }
 
 mat-icon {

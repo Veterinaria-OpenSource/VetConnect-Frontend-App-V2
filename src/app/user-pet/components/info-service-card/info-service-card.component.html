@@ -1,0 +1,33 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div style="display: flex; justify-content: center; width: 100%;">
+      <mat-card-title>Información del Servicio</mat-card-title>
+    </div>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="info-service">
+      <div class="info-service-content">
+        <p>
+          <span>Servicio :</span>
+          <span style="font-weight: bold">Baño</span>
+        </p>
+        <p>
+          <span>Día :</span>
+          <span style="font-weight: bold">Martes 06 - Abril</span>
+        </p>
+        <p>
+          <span>Precio Total :</span>
+          <span style="font-weight: bold">S/. 60</span>
+        </p>
+
+        <h3 class="form-title-info" >Información adicional:</h3>
+        <textarea [readOnly]="!confirmButton"  [(ngModel)]="infoText" class="textarea-info" ></textarea>
+
+      </div>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; margin-top: 0.5em;">
+      <button (click)="submitText()" *ngIf="confirmButton" class="button-confirm" mat-raised-button matStepperNext>Confirmar</button>
+    </div>
+  </mat-card-content>
+</mat-card>

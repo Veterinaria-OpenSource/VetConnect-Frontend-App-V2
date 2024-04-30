@@ -1,0 +1,128 @@
+<main>
+  <div class="bg-orange-200 p-12 rounded-xl shadow-lg max-w-xl mx-auto  my-10">
+    <div class="text-center">
+      <h1 class="text-3xl font-bold mb-2">Registrarse</h1>
+      <p class="text-lg mb-4">Ingresa tus datos personales para crear tu  cuenta en VetConnect</p>
+      <div class="flex gap-4 justify-center mb-6">
+        <button mat-raised-button color="accent" class="bg-blue-500   hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" (click) ="toggleForm('cliente')">Cliente</button>
+        <button mat-raised-button class="bg-gray-300 hover:bg-gray-400  text-black font-bold py-2 px-4 rounded" (click)="toggleForm  ('empresa')">Empresa</button>
+      </div>
+    </div>
+
+    <!-- CLÍNICA VETERINARIA -->
+
+    <form *ngIf="selectedForm === 'cliente'" class="mt-2">
+
+      <div class="grid grid-cols-2 gap-4 ">
+
+        <mat-form-field appearance="fill" class="col-span-1">
+          <mat-label>Nombre</mat-label>
+          <input type="text" id="name"  name="name"
+             class="border w-full text-base px-2 py-1 focus:outline-none  focus:ring-0 focus:border-gray-600"
+             placeholder="Ingresa tu nombre">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="col-span-1">
+          <mat-label>DNI</mat-label>
+          <input type="number" id="dni" name="dni"
+             class="border w-full text-base px-2 py-1 focus:outline-none  focus:ring-0 focus:border-gray-600"
+             placeholder="Ingresa tu DNI">
+
+        </mat-form-field>
+
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 ">
+
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input type="text" id="email" name="email"
+            class="border w-full text-base px-2 py-1 focus:outline-none   focus:ring-0 focus:border-gray-600"
+            placeholder="Ingresa tu correo">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input type="password" id="password"   name="password"
+            class="border w-full text-base px-2 py-1 focus:outline-none   focus:ring-0 focus:border-gray-600"
+            placeholder="Ingresa tu contraseña ">
+        </mat-form-field>
+
+
+        <mat-form-field appearance="fill">
+
+          <mat-label>Confirm Password</mat-label>
+          <input matInput type="password" placeholder="Confirm Password">
+
+        </mat-form-field>
+
+      </div>
+
+      <button mat-raised-button color="primary" class="w-full bg-blue-500   hover:bg-blue-600 text-white font-bold py-3 px-4 rounded">Crear   cuenta</button>
+    </form>
+
+  <!-- CLÍNICA VETERINARIA -->
+
+    <form *ngIf="selectedForm === 'empresa'" class="mt-2">
+
+      <div class="grid grid-cols-2 gap-4 mb-4">
+
+        <mat-form-field appearance="fill" >
+
+          <mat-label>Nombre de la Empresa</mat-label>
+          <input type="text" id="clinicName" name="clinicName"
+             class="border w-full text-base px-2 py-1 focus:outline-none  focus:ring-0 focus:border-gray-600"
+             placeholder="Veterinary clinic's name">
+
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+
+          <mat-label>Email</mat-label>
+          <input type="text" id="email" name="email"
+            class="border w-full text-base px-2 py-1 focus:outline-none   focus:ring-0 focus:border-gray-600"
+            placeholder="Ingresa tu correo">
+
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+
+          <mat-label>RUC</mat-label>
+          <input type="number" id="ruc" name="ruc"
+             class="border w-full text-base px-2 py-1 focus:outline-none  focus:ring-0 focus:border-gray-600"
+             placeholder="Ruc Number">
+
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+
+          <mat-label>Phone</mat-label>
+          <input type="number" id="cellphone" name="cellphone"
+             class="border w-full text-base px-2 py-1 focus:outline-none  focus:ring-0 focus:border-gray-600"
+             placeholder="Ingresa tu celular">
+
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+
+          <mat-label>Password</mat-label>
+          <input type="password" id="password" name="password"
+            class="border w-full text-base px-2 py-1 focus:outline-none   focus:ring-0 focus:border-gray-600"
+            placeholder="Ingresa tu contraseña ">
+
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+
+          <mat-label>Confirm Password</mat-label>
+          <input matInput type="password" placeholder="Confirm Password">
+
+        </mat-form-field>
+
+      </div>
+
+      <button mat-raised-button color="primary" class="w-full bg-blue-500   hover:bg-blue-600 text-white font-bold py-3 px-4 rounded">Crear cuenta</button>
+
+    </form>
+  </div>
+</main>
