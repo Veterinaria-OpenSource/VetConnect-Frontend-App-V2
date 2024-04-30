@@ -4,6 +4,7 @@ import { HomeComponent } from './user-pet/pages/home/home.component';
 import { VetCenterDetailComponent } from './user-pet/pages/vet-center-detail/vet-center-detail.component';
 import { ProfileDetailsComponent } from './user-pet/pages/profile-details/profile-details.component';
 import { FaqPolityComponent } from './shared/services/faq-polity/faq-polity.component';
+import { LoginComponent } from './public/pages/login/login.component';
 
 const routes: Routes = [
   {
@@ -14,11 +15,14 @@ const routes: Routes = [
     path: 'vet-centers/:id',
     component: VetCenterDetailComponent,
   },
-  { path: 'profile', 
-  component: ProfileDetailsComponent 
+  { path: 'profile',
+  component: ProfileDetailsComponent
   },
-  { path: 'faq', 
+  { path: 'faq',
   component: FaqPolityComponent
+  },
+  { path: 'login',
+  component: LoginComponent
   },
 ];
 
