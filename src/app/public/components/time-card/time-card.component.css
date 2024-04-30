@@ -1,0 +1,27 @@
+.time-card {
+  background-color: var(--kt-bg-card);
+  padding: 1rem 4rem 2rem 4rem;
+  box-shadow: var(--kt-bg-dark) 0 0 4px;
+  & .day {
+    & > h3 {
+      font-size: 2rem;
+      margin-bottom: 0;
+      padding: 1rem 0;
+      font-weight: 300;
+    }
+    & .day-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      list-style-type: none;
+      gap: 1rem;
+
+      & .day-list-item {
+        & .btn-hour {
+          background-color: var(--kt-bg-btn);
+          color: var(--kt-bg-green);
+          border: none;
+        }
+      }
+    }
+  }
+}

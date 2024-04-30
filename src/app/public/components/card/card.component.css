@@ -1,6 +1,12 @@
 .example-card {
   max-width: 400px;
-  padding: 1rem 2rem;
+  padding: 2rem 4rem;
+  background-color: var(--kt-bg-card);
+  box-shadow: var(--kt-bg-dark) 0 0 4px;
+}
+
+.mat-mdc-card-header {
+  padding: 0;
 }
 
 .mat-mdc-card-content {
@@ -18,9 +24,14 @@
 }
 
 .btn {
-  background-color: #196c58;
+  background-color: var(--kt-bg-green);
 }
 
 .mat-mdc-outlined-button:not(:disabled) {
-  color: #fefefe;
+  color: var(--kt-bg-light);
+  padding: 2rem;
+}
+
+.mdc-card__actions {
+  padding: 1rem 0;
 }
