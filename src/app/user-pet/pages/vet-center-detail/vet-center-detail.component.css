@@ -1,0 +1,53 @@
+.vet-center-list-card {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.map-container {
+  max-width: 400px;
+  max-height: 430px;
+  padding: 2rem 4rem;
+  background-color: var(--kt-bg-card);
+  box-shadow: var(--kt-bg-dark) 0 0 4px;
+  align-items: center; /*** Add this line ***/
+  justify-content: center;/*** Add this line ***/
+}
+
+.map-button {
+  margin-top: 10px;
+  background-color: #176A56;
+  color: #E8FFF9;
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button{
+  text-align: center;
+}
+
+.map-container img {
+  max-width: 100%; /* La imagen no se extenderá más allá de su tamaño original */
+  max-height: 100%; /* La imagen no se extenderá más allá de su tamaño original */
+}
+
+.time-card-container{
+  max-height: 3rem;
+}
+
+.vet-description-container {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: var(--kt-bg-card); /* Ajusta el color de fondo según tu paleta de colores */
+  box-shadow: var(--kt-bg-dark) 0 0 4px;
+  margin-top: 4rem;
+  max-width: 82rem;
+}
+
+.vet-description {
+  color: #333; /* Cambia el color del texto si es necesario */
+  font-size: 16px; /* Ajusta el tamaño del texto según prefieras */
+}
