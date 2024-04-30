@@ -39,6 +39,7 @@ import {MatFormField, MatLabel} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
 import { ProfileDetailsComponent } from './user-pet/pages/profile-details/profile-details.component';
 import { FaqPolityComponent } from './shared/services/faq-polity/faq-polity.component';
+import { LoginComponent } from './public/pages/login/login.component';
 
 // funcion para cargar los archivos de idioma
 export function createTranslateLoader(http: HttpClient) {
@@ -60,6 +61,7 @@ export function createTranslateLoader(http: HttpClient) {
     ConfirmationCardComponent,
     ProfileDetailsComponent,
     FaqPolityComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
