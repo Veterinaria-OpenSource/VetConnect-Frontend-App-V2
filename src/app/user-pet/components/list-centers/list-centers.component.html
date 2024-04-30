@@ -1,3 +1,6 @@
 @for (vetCenter of vetCenters; track vetCenter.id) {
-<card [vetCenter]="vetCenter"></card>
+<article class="container-cards">
+  <card [vetCenter]="vetCenter"></card>
+  <time-card />
+</article>
 }

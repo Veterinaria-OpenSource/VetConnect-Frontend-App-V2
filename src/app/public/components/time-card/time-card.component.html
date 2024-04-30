@@ -1,1 +1,18 @@
-<p>time-card works!</p>
+<div class="time-card">
+  <div class="day" *ngFor="let i of [0, 1]">
+    <h3>{{ i === 0 ? "Today" : "Tomorrow" }}</h3>
+    <ul class="day-list">
+      <li class="day-list-item" *ngFor="let j of [0, 1, 2, 3]">
+        <button mat-stroked-button class="btn-hour">
+          {{ j + 8 < 10 ? "0" + (j + 8) : j + 8 }}:00 AM
+        </button>
+      </li>
+      <li
+        class="day-list-item"
+        *ngFor="let j of [12, 13, 14, 15, 16, 17, 18, 19, 20]"
+      >
+        <button mat-stroked-button class="btn-hour">{{ j }}:00 PM</button>
+      </li>
+    </ul>
+  </div>
+</div>

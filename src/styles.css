@@ -1,4 +1,85 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --kt-bg-base: #fff8ee;
+  --kt-bg-dark: hsl(0, 0%, 10%);
+  --kt-bg-card: #ffffff;
+  --kt-bg-green: #196c58;
+  --kt-bg-light: #fefefe;
+  --kt-bg-btn: #eafbf6;
+}
+header,
+nav,
+main,
+aside,
+form,
+footer,
+div,
+section,
+article,
+fieldset,
+summary,
+legend,
+menu,
+figure,
+html,
+body,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+button,
+input,
+table,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td,
+label,
+canvas,
+details,
+img {
+  margin: 0;
+  padding: 0;
+  letter-spacing: initial;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--default);
+  font-size: var(--text-normal);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Kanit", sans-serif;
+  font-style: normal;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--kt-bg-base);
+  /* color: var(--default); */
+  padding: 0 5rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
