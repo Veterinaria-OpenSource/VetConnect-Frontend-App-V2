@@ -1,0 +1,43 @@
+.stepper-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.step-label{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mat-step-icon {
+  margin-bottom: 5px; /* Ajusta el espacio entre el ícono y el texto */
+}
+
+.pay-stepper{
+  width: 100%;
+  background-color: var(--kt-bg-base);
+}
+
+@media (min-width: 1000px) {
+  .stepper-container {
+    margin: 3rem 0;
+  }
+  .pay-stepper{
+    margin: 0 50%;
+    padding: 0 10%;
+  }
+}
+
+.cards-container{
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5em;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+}

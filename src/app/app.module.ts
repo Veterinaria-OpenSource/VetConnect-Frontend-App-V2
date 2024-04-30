@@ -29,6 +29,14 @@ import { TimeCardComponent } from './public/components/time-card/time-card.compo
 import { HomeComponent } from './user-pet/pages/home/home.component';
 import { VetCenterDetailComponent } from './user-pet/pages/vet-center-detail/vet-center-detail.component';
 import { VetCenterService } from './user-pet/services/vet-center.service';
+import { PaymentComponent } from './user-pet/pages/payment/payment/payment.component';
+import { InfoServiceCardComponent } from './user-pet/components/info-service-card/info-service-card.component';
+import {FormsModule} from "@angular/forms";
+import {MatStep, MatStepLabel, MatStepper, MatStepperNext} from "@angular/material/stepper";
+import { PaymentFormCardComponent } from './user-pet/components/payment-form-card/payment-form-card.component';
+import { ConfirmationCardComponent } from './user-pet/components/confirmation-card/confirmation-card.component';
+import {MatFormField, MatLabel} from "@angular/material/form-field";
+import {MatInput} from "@angular/material/input";
 
 // funcion para cargar los archivos de idioma
 export function createTranslateLoader(http: HttpClient) {
@@ -44,6 +52,10 @@ export function createTranslateLoader(http: HttpClient) {
     ListCentersComponent,
     VetCenterDetailComponent,
     TimeCardComponent,
+    PaymentComponent,
+    InfoServiceCardComponent,
+    PaymentFormCardComponent,
+    ConfirmationCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,6 +75,14 @@ export function createTranslateLoader(http: HttpClient) {
     }),
     MatIconButton,
     MatIcon,
+    FormsModule,
+    MatStepper,
+    MatStep,
+    MatStepLabel,
+    MatFormField,
+    MatLabel,
+    MatInput,
+    MatStepperNext,
   ],
   providers: [provideAnimationsAsync(), VetCenterService],
   bootstrap: [AppComponent],
