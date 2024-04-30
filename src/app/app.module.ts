@@ -38,6 +38,7 @@ import { ConfirmationCardComponent } from './user-pet/components/confirmation-ca
 import {MatFormField, MatLabel} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
 import { ProfileDetailsComponent } from './user-pet/pages/profile-details/profile-details.component';
+import { FaqPolityComponent } from './shared/services/faq-polity/faq-polity.component';
 
 // funcion para cargar los archivos de idioma
 export function createTranslateLoader(http: HttpClient) {
@@ -58,6 +59,7 @@ export function createTranslateLoader(http: HttpClient) {
     PaymentFormCardComponent,
     ConfirmationCardComponent,
     ProfileDetailsComponent,
+    FaqPolityComponent,
   ],
   imports: [
     BrowserModule,
