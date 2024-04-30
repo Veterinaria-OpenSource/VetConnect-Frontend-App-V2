@@ -1,0 +1,134 @@
+.faq-container {
+    width: 90%;
+    max-width: 2300px;
+    margin: 5px;
+    align-items: center;
+    background: #FEDAA9;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .faq-container mat-card {
+    margin: 0;
+  }
+  
+  .faq-container .faq-title {
+    color: #16C096;
+    font-size: 44px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+  
+  .faq-container .faq-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  
+  .faq-container .faq-row .faq-card {
+    flex: 1;
+    margin-right: 10px;
+    background: #FEDAA9;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .faq-container .faq-row .faq-card:last-child {
+    margin-bottom: 0;
+  }
+  
+  .faq-container .faq-row .faq-card .mat-card-content {
+    padding: 20px;
+  }
+  
+  .faq-container .faq-row .faq-card .faq-card-content h3 {
+    font-size: 15px;
+    font-family: "League Spartan", sans-serif;
+    color: #2C9B71;
+    font-weight: bold;
+    background: #FEDAA9;
+    text-align: center;
+  }
+  
+  .faq-container .faq-row .faq-card .faq-card-content p {
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  .faq-container .icon-container {
+    display: flex;
+    justify-content: center;
+    width: 440px;
+  }
+  
+  @media (max-width: 768px) {
+    .faq-container .faq-row {
+      flex-direction: column;
+    }
+  
+    .faq-container .faq-row .faq-card {
+      background: #FEDAA9;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .faq-container .faq-row .faq-card:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  .policy-card {
+    background: #B1FFE3;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 90%;
+    max-width: 2300px;
+    margin: 10px;
+  }
+  
+  .policy-card mat-card {
+    margin: 0;
+  }
+  
+  .policy-card .policy-title {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    font-size: 44px;
+    text-align: center;
+    color: #FFAC30;
+  }
+  
+  .policy-card mat-card-content h2 {
+    font-size: 15px;
+    color: #333;
+    padding: 1px 0;
+  }
+  
+  .policy-card mat-card-content h3 {
+    font-size: 15px;
+    color: #555;
+    padding: 5px 2px;
+    margin-bottom: -5px;
+  }
+  
+  .policy-card mat-card-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .policy-card mat-card-content ul li {
+    padding: 1px 0;
+    font-size: 15px;
+  }
+  
+  .policy-card mat-card-content ul li::before {
+    content: "• ";
+    color: #000000;
+    font-weight: bold;
+  }
+  
