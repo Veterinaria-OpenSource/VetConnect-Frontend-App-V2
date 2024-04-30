@@ -1,0 +1,66 @@
+.example-card {
+  width: 400px;
+  height: 404px;
+  padding: 1rem 2rem;
+}
+
+.mat-mdc-card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0 1rem 0;
+
+  & p {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.content-confirmation{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+
+h3{
+  text-align: center;
+}
+
+.add-info{
+  width: 100%;
+}
+.add-info-content{
+  padding: 1.2em;
+  justify-items: center;
+  width: 100%;
+}
+
+
+.form-title-info{
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-bottom: 1px;
+}
+.textarea-info{
+  resize: none;
+  height: 95px;
+  width: 100%;
+}
+.confirm-container{
+  align-items: center;
+
+}
+.confirmation-img{
+  height: 10em;
+  width: 10em;
+  margin: 0.5em;
+}
+
+.button-return{
+  border-radius: 10px;
+  background-color: #FFF3E0;
+  color: #664617;
+  border: 4px solid #FFBB57;
+}
+
