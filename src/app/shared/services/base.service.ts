@@ -35,4 +35,10 @@ export class BaseService<T> {
       .get<T>(this.vetCenterPath())
       .pipe(retry(2), catchError(this.handleError));
   }
+
+  getVetCenterById(id: string): Observable<T> {
+    return this.http
+      .get<T>(`${this.vetCenterPath()}/${id}`)
+      .pipe(retry(2), catchError(this.handleError));
+  }
 }

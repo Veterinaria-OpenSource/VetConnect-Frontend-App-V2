@@ -16,7 +16,6 @@ export class ListCentersComponent implements OnInit {
     this.apiVetCenterService.getVetCenters().subscribe((vetCenters: any) => {
       this.vetCenters = vetCenters;
     });
-    console.log(this.vetCenters);
   }
 
   ngOnInit(): void {
