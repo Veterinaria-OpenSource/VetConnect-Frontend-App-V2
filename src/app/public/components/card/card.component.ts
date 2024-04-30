@@ -11,6 +11,9 @@ export class CardComponent {
   constructor(private router: Router) {}
 
   isOnMainRoute(): boolean {
-    return this.router.url === '/';
+    return this.router.url === '/home';
+  }
+  isOnMainRouteNotPayment(): boolean {
+    return this.router.url === '/home';
   }
 }

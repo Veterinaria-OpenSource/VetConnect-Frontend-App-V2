@@ -19,20 +19,12 @@
     <a
       mat-stroked-button
       class="btn"
-      [routerLink]="isOnMainRoute() ? '/vet-centers/' + vetCenter.id : '/'"
+      [routerLink]="isOnMainRoute() ? '/vet-centers/' + vetCenter.id : '/home'"
     >
       {{ isOnMainRoute() ? "See More" : "Go Back" }}
     </a>
-    <a
-      mat-stroked-button
-      class="btn"
-      [routerLink]="
-        isOnMainRoute()
-          ? '/payment/' + vetCenter.id
-          : '/vet-centers/ ' + vetCenter.id
-      "
-    >
-      {{ isOnMainRoute() ? "Payment" : "Cancel" }}
+    <a mat-stroked-button class="btn" [routerLink]="'/payment/' + vetCenter.id">
+      Payment
     </a>
   </mat-card-actions>
 </mat-card>

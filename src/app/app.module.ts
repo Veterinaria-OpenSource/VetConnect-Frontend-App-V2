@@ -35,28 +35,17 @@ import {
   MatStepperNext,
 } from '@angular/material/stepper';
 import { TimeCardComponent } from './public/components/time-card/time-card.component';
+import { LoginComponent } from './public/pages/login/login.component';
+import { RegisterComponent } from './public/pages/register/register.component';
+import { FaqPolityComponent } from './shared/pages/faq-polity/faq-polity.component';
 import { ConfirmationCardComponent } from './user-pet/components/confirmation-card/confirmation-card.component';
 import { InfoServiceCardComponent } from './user-pet/components/info-service-card/info-service-card.component';
 import { PaymentFormCardComponent } from './user-pet/components/payment-form-card/payment-form-card.component';
 import { HomeComponent } from './user-pet/pages/home/home.component';
 import { PaymentComponent } from './user-pet/pages/payment/payment.component';
+import { ProfileDetailsComponent } from './user-pet/pages/profile-details/profile-details.component';
 import { VetCenterDetailComponent } from './user-pet/pages/vet-center-detail/vet-center-detail.component';
 import { VetCenterService } from './user-pet/services/vet-center.service';
-<<<<<<< HEAD
-=======
-import { PaymentComponent } from './user-pet/pages/payment/payment/payment.component';
-import { InfoServiceCardComponent } from './user-pet/components/info-service-card/info-service-card.component';
-import {FormsModule} from "@angular/forms";
-import {MatStep, MatStepLabel, MatStepper, MatStepperNext} from "@angular/material/stepper";
-import { PaymentFormCardComponent } from './user-pet/components/payment-form-card/payment-form-card.component';
-import { ConfirmationCardComponent } from './user-pet/components/confirmation-card/confirmation-card.component';
-import {MatFormField, MatLabel} from "@angular/material/form-field";
-import {MatInput} from "@angular/material/input";
-import { ProfileDetailsComponent } from './user-pet/pages/profile-details/profile-details.component';
-import { FaqPolityComponent } from './shared/services/faq-polity/faq-polity.component';
-import { LoginComponent } from './public/pages/login/login.component';
-import { RegisterComponent } from './public/pages/register/register.component';
->>>>>>> 4c612f2235a9a474f00b25098bd25cc65972b9b4
 
 // funcion para cargar los archivos de idioma
 export function createTranslateLoader(http: HttpClient) {
