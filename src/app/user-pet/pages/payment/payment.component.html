@@ -1,0 +1,39 @@
+<main class="stepper-container">
+  <mat-stepper
+    linear
+    class="pay-stepper"
+    labelPosition="bottom"
+    [linear]="true"
+  >
+    <mat-step>
+      <ng-template matStepLabel> Details </ng-template>
+      <div class="cards-container">
+        <card [vetCenter]="vetCenter"></card>
+        <app-info-service-card
+          (textInput)="textReceive($event)"
+        ></app-info-service-card>
+      </div>
+    </mat-step>
+
+    <mat-step>
+      <ng-template matStepLabel> Payment </ng-template>
+
+      <div class="cards-container">
+        <card [vetCenter]="vetCenter"></card>
+        <app-info-service-card
+          [confirmButton]="false"
+          [infoText]="textReceived"
+        ></app-info-service-card>
+        <app-payment-form-card></app-payment-form-card>
+      </div>
+    </mat-step>
+
+    <mat-step>
+      <ng-template matStepLabel> Thank You </ng-template>
+
+      <div class="cards-container">
+        <app-confirmation-card></app-confirmation-card>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</main>
