@@ -16,3 +16,11 @@
 .mat-mdc-card-content:last-child {
   padding-bottom: auto;
 }
+
+.btn {
+  background-color: #196c58;
+}
+
+.mat-mdc-outlined-button:not(:disabled) {
+  color: #fefefe;
+}

@@ -17,6 +17,7 @@ import { MatIconButton } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 // elementos para el card
+import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 
 // componentes del dominio public
@@ -24,7 +25,9 @@ import { CardComponent } from './public/components/card/card.component';
 import { ListCentersComponent } from './user-pet/components/list-centers/list-centers.component';
 
 // paginas del dominio user-pet
+import { TimeCardComponent } from './public/components/time-card/time-card.component';
 import { HomeComponent } from './user-pet/pages/home/home.component';
+import { VetCenterDetailComponent } from './user-pet/pages/vet-center-detail/vet-center-detail.component';
 import { VetCenterService } from './user-pet/services/vet-center.service';
 
 // funcion para cargar los archivos de idioma
@@ -39,6 +42,8 @@ export function createTranslateLoader(http: HttpClient) {
     CardComponent,
     HomeComponent,
     ListCentersComponent,
+    VetCenterDetailComponent,
+    TimeCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +51,7 @@ export function createTranslateLoader(http: HttpClient) {
     HttpClientModule,
     MatToolbarModule,
     MatCardModule,
+    MatButtonModule,
     // para cambiar el idioma
     TranslateModule.forRoot({
       defaultLanguage: 'en',

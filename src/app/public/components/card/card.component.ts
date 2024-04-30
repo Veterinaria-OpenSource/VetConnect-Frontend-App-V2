@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'card',
@@ -7,4 +8,9 @@ import { Component, Input } from '@angular/core';
 })
 export class CardComponent {
   @Input() vetCenter: any;
+  constructor(private router: Router) {}
+
+  isOnMainRoute(): boolean {
+    return this.router.url === '/';
+  }
 }
