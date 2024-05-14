@@ -1,6 +1,6 @@
 .example-card {
-  width: 55rem;
-  height: 62rem;
+  max-width: 55rem;
+  max-height: 62rem;
   padding: 2rem 4rem;
   background-color: var(--kt-bg-card);
   border-radius: 1rem;
