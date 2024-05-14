@@ -15,6 +15,10 @@ import { ToolbarComponent } from './public/components/toolbar/toolbar.component'
 // elementos para el toolbar
 import { MatIconButton } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 // elementos para el card
 import { MatButtonModule } from '@angular/material/button';
@@ -46,6 +50,7 @@ import { PaymentComponent } from './user-pet/pages/payment/payment.component';
 import { ProfileDetailsComponent } from './user-pet/pages/profile-details/profile-details.component';
 import { VetCenterDetailComponent } from './user-pet/pages/vet-center-detail/vet-center-detail.component';
 import { VetCenterService } from './user-pet/services/vet-center.service';
+import { SwitchLanguageComponent } from './public/components/switch-language/switch-language.component';
 
 // funcion para cargar los archivos de idioma
 export function createTranslateLoader(http: HttpClient) {
@@ -69,6 +74,7 @@ export function createTranslateLoader(http: HttpClient) {
     FaqPolityComponent,
     LoginComponent,
     RegisterComponent,
+    SwitchLanguageComponent,
   ],
   imports: [
     BrowserModule,
@@ -96,6 +102,10 @@ export function createTranslateLoader(http: HttpClient) {
     MatLabel,
     MatInput,
     MatStepperNext,
+    MatMenuModule,
+    MatOptionModule,
+    MatSelectModule,
+    MatFormFieldModule,
   ],
   providers: [provideAnimationsAsync(), VetCenterService],
   bootstrap: [AppComponent],
