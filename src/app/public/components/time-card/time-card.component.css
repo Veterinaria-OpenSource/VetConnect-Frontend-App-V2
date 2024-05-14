@@ -3,6 +3,8 @@
   padding: 1rem 4rem 2rem 4rem;
   border-radius: 1rem;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  max-width: fit-content;
+  height: 62rem;
   & .day {
     & > h3 {
       font-size: 2rem;

@@ -10,4 +10,5 @@ mat-toolbar-row {
 
 .logo-toolbar {
   max-width: 22rem;
+  cursor: pointer;
 }
