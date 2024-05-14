@@ -1,5 +1,6 @@
 mat-toolbar {
   background-color: var(--kt-bg-green);
+  color: var(--kt-text-white);
 }
 
 

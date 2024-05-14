@@ -3,5 +3,13 @@
         "buttonLanguage" : "Language",
         "languagePrimary": "Spanish",
         "languageSecondary": "English"
+    },
+
+    "Vet": {
+        
+        "Description": {
+            "TitleProfile": "Description Profile",
+            "DescriptionProfile": "Description"
+        }
     }
 }

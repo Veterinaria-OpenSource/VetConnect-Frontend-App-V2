@@ -13,6 +13,8 @@
   box-shadow: var(--kt-bg-dark) 0 0 4px;
   align-items: center; /*** Add this line ***/
   justify-content: center;/*** Add this line ***/
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .map-button {
@@ -44,6 +46,8 @@
   background-color: var(--kt-bg-card); /* Ajusta el color de fondo según tu paleta de colores */
   box-shadow: var(--kt-bg-dark) 0 0 4px;
   max-width: 82rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .vet-description {
