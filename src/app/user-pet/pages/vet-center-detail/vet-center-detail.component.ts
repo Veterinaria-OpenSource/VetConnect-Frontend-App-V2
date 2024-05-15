@@ -11,6 +11,7 @@ import { VetCenterService } from '../../services/vet-center.service';
 export class VetCenterDetailComponent implements OnInit {
   paramsId: string = '';
   vetCenter: IVetCenter = {} as IVetCenter;
+  
   constructor(
     private route: ActivatedRoute,
     private apiVetCenterService: VetCenterService
@@ -23,6 +24,7 @@ export class VetCenterDetailComponent implements OnInit {
         this.vetCenter = vetCenter;
       });
   }
+ 
 
   ngOnInit() {
     this.route.params.subscribe((params) => {

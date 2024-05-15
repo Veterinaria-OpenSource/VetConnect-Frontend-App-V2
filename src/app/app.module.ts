@@ -20,6 +20,10 @@ import { MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
+// elementos para API de Google Maps
+import { GoogleMapsModule } from '@angular/google-maps';
+
+
 // elementos para el card
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -51,6 +55,8 @@ import { ProfileDetailsComponent } from './user-pet/pages/profile-details/profil
 import { VetCenterDetailComponent } from './user-pet/pages/vet-center-detail/vet-center-detail.component';
 import { VetCenterService } from './user-pet/services/vet-center.service';
 import { SwitchLanguageComponent } from './public/components/switch-language/switch-language.component';
+import { GoogleMapsDetailsComponent } from './user-pet/components/google-maps-details/google-maps-details.component';
+import { CurrencyPipe } from '@angular/common';
 
 // funcion para cargar los archivos de idioma
 export function createTranslateLoader(http: HttpClient) {
@@ -75,6 +81,7 @@ export function createTranslateLoader(http: HttpClient) {
     LoginComponent,
     RegisterComponent,
     SwitchLanguageComponent,
+    GoogleMapsDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -106,8 +113,9 @@ export function createTranslateLoader(http: HttpClient) {
     MatOptionModule,
     MatSelectModule,
     MatFormFieldModule,
+    GoogleMapsModule,
   ],
-  providers: [provideAnimationsAsync(), VetCenterService],
+  providers: [provideAnimationsAsync(), VetCenterService, CurrencyPipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

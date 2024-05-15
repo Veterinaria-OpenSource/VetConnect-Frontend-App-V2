@@ -7,9 +7,19 @@
 
     "Vet": {
         
-        "Description": {
-            "TitleProfile": "Descripcion del Perfil",
-            "DescriptionProfile": "Descripcion"
+        "DescriptionProfile": {
+            "TitleProfile": "Descripcion del Perfil"
         }
+    },
+
+    "VetCard":{
+        "Address": "Direccion",
+        "Consulta": "Consulta Clinica",
+        "Banio": "Baño"
+    },
+
+    "TimeCard":{
+        "Today": "Hoy",
+        "Tomorrow": "Mañana"
     }
 }
