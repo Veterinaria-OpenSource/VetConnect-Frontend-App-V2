@@ -1,29 +1,17 @@
-<main>
-  <div class="vet-center-list-card">
+<main class="main-vet-details">
+  <div class="vet-details-list-card">
 
-    <card [vetCenter]="vetCenter" />
-
-    <div class="map-container">
-      <img src="https://www.google.com/maps/d/thumbnail?mid=1B3YHKC7p5F2wcU54flgXcPSb6eM&hl=en" alt="map">
-
-      <div class="button">
-        <button class="map-button">Get Directions</button>
-      </div>
-    </div>
-
-    <div class="time-card-container">
-      <time-card></time-card>
-    </div>
+    <card class="vet-details-card" [vetCenter]="vetCenter" />
+    <app-google-maps-details></app-google-maps-details>
+    <time-card class="vet-details-time-card"></time-card>
   </div>
 
-  <mat-card>
-    <mat-card-title>{{ 'Vet.Description.TitleProfile'| translate }} </mat-card-title>
+  <mat-card class="vet-details-profile-description">
+    <mat-card-title>{{ 'Vet.DescriptionProfile.TitleProfile'| translate }} </mat-card-title>
     <mat-card-content>
-      <div class="service-card">
-      </div>
+      <p>{{ vetCenter.description| translate }}</p>
     </mat-card-content>
   </mat-card>
-
 </main>
 
 

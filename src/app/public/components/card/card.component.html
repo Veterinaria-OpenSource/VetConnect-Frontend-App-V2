@@ -5,14 +5,14 @@
   </mat-card-header>
   <img mat-card-image [src]="vetCenter.image" [alt]="vetCenter.clinicName" />
   <mat-card-content>
-    <p>Address: {{ vetCenter.direction }}</p>
+    <p>{{'VetCard.Address' | translate }}: {{ vetCenter.direction }}</p>
     <p>
-      <span>Clinical Consultation</span>
-      <span>Price: S/. {{ vetCenter.clinicalPrice }}</span>
+      <span>{{'VetCard.Consulta' | translate}}</span>
+      <span>{{ vetCenter.clinicalPrice | currency: 'PEN '}}</span>
     </p>
     <p>
-      <span>Bathroom</span>
-      <span>Price: S/. {{ vetCenter.bathprice }}</span>
+      <span>{{'VetCard.Banio' | translate}}</span>
+      <span>{{ vetCenter.bathprice | currency: 'PEN '}}</span>
     </p>
   </mat-card-content>
   <mat-card-actions style="display: flex; gap: 3rem; justify-content: center">

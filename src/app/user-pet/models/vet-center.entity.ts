@@ -9,5 +9,6 @@ export interface IVetCenter {
   clinicalPrice: string;
   bathprice: string;
   direction: string;
+  description: string;
   id: string;
 }
