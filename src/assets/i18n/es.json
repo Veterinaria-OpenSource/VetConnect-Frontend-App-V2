@@ -21,5 +21,13 @@
     "TimeCard":{
         "Today": "Hoy",
         "Tomorrow": "Mañana"
+    },
+
+    "VetServiceProfile":{
+        "TitleService": "Servicios de la Veterinaria"
+    },
+
+    "VetOpinionOfClient":{
+        "TitleOpinion": "Opiniones de los clientes"
     }
 }
