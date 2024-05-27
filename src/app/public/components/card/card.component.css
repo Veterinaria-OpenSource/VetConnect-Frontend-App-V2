@@ -1,8 +1,10 @@
 .example-card {
-  max-width: 400px;
+  max-width: 55rem;
+  max-height: 62rem;
   padding: 2rem 4rem;
   background-color: var(--kt-bg-card);
-  box-shadow: var(--kt-bg-dark) 0 0 4px;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .mat-mdc-card-header {

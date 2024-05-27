@@ -15,6 +15,14 @@ import { ToolbarComponent } from './public/components/toolbar/toolbar.component'
 // elementos para el toolbar
 import { MatIconButton } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+// elementos para API de Google Maps
+import { GoogleMapsModule } from '@angular/google-maps';
+
 
 // elementos para el card
 import { MatButtonModule } from '@angular/material/button';
@@ -46,6 +54,21 @@ import { PaymentComponent } from './user-pet/pages/payment/payment.component';
 import { ProfileDetailsComponent } from './user-pet/pages/profile-details/profile-details.component';
 import { VetCenterDetailComponent } from './user-pet/pages/vet-center-detail/vet-center-detail.component';
 import { VetCenterService } from './user-pet/services/vet-center.service';
+import { SwitchLanguageComponent } from './public/components/switch-language/switch-language.component';
+import { GoogleMapsDetailsComponent } from './user-pet/components/google-maps-details/google-maps-details.component';
+import { CurrencyPipe } from '@angular/common';
+import { TransactionsComponent } from './user-vet/pages/transactions/transactions.component';
+import {
+  MatCell,
+  MatCellDef,
+  MatColumnDef,
+  MatHeaderCell,
+  MatHeaderCellDef, MatHeaderRow, MatHeaderRowDef,
+  MatRow, MatRowDef,
+  MatTable
+} from "@angular/material/table";
+import {MatSort} from "@angular/material/sort";
+import {MatPaginator} from "@angular/material/paginator";
 
 // funcion para cargar los archivos de idioma
 export function createTranslateLoader(http: HttpClient) {
@@ -69,6 +92,9 @@ export function createTranslateLoader(http: HttpClient) {
     FaqPolityComponent,
     LoginComponent,
     RegisterComponent,
+    SwitchLanguageComponent,
+    GoogleMapsDetailsComponent,
+    TransactionsComponent,
   ],
   imports: [
     BrowserModule,
@@ -96,8 +122,25 @@ export function createTranslateLoader(http: HttpClient) {
     MatLabel,
     MatInput,
     MatStepperNext,
+    MatMenuModule,
+    MatOptionModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    GoogleMapsModule,
+    MatTable,
+    MatSort,
+    MatColumnDef,
+    MatHeaderCell,
+    MatCell,
+    MatCellDef,
+    MatHeaderCellDef,
+    MatRow,
+    MatHeaderRow,
+    MatPaginator,
+    MatHeaderRowDef,
+    MatRowDef,
   ],
-  providers: [provideAnimationsAsync(), VetCenterService],
+  providers: [provideAnimationsAsync(), VetCenterService, CurrencyPipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

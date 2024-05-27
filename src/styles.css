@@ -81,12 +81,11 @@ html {
 
 body {
   background-color: var(--kt-bg-base);
-  /* color: var(--default); */
+  color: var(--default);
 }
 
 main {
-  width: 100%;
-  padding: 0 5rem;
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
 }

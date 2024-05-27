@@ -1,17 +1,14 @@
 mat-toolbar {
   background-color: var(--kt-bg-green);
+  color: var(--kt-text-white);
 }
 
-mat-icon {
-  color: white;
-}
 
 mat-toolbar-row {
   justify-content: space-between;
 }
 
-.title-toolbar {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: white;
+.logo-toolbar {
+  max-width: 22rem;
+  cursor: pointer;
 }

@@ -1,0 +1,27 @@
+.table-container{
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+  gap:1.5em;
+}
+
+h2{
+  align-self: center;
+  font-weight: bolder;
+  font-size: 3.5em;
+  margin: 0.5em;
+}
+
+table{
+  background-color: #BDECE1;
+}
+
+.header{
+  background-color: #30BAB2;
+  color:white;
+}
+
+.paginator{
+  background-color:  #30BAB2 ;
+  color:white;
+}
