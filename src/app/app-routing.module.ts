@@ -7,6 +7,7 @@ import { HomeComponent } from './user-pet/pages/home/home.component';
 import { PaymentComponent } from './user-pet/pages/payment/payment.component';
 import { ProfileDetailsComponent } from './user-pet/pages/profile-details/profile-details.component';
 import { VetCenterDetailComponent } from './user-pet/pages/vet-center-detail/vet-center-detail.component';
+import {TransactionsComponent} from "./user-vet/pages/transactions/transactions.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -23,6 +24,7 @@ const routes: Routes = [
     path: 'payment/:id',
     component: PaymentComponent,
   },
+  {path:'transactions', component: TransactionsComponent},
   { path: '**', redirectTo: 'login' }, // Add this line to redirect all other routes to login
 ];
 

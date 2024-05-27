@@ -57,6 +57,18 @@ import { VetCenterService } from './user-pet/services/vet-center.service';
 import { SwitchLanguageComponent } from './public/components/switch-language/switch-language.component';
 import { GoogleMapsDetailsComponent } from './user-pet/components/google-maps-details/google-maps-details.component';
 import { CurrencyPipe } from '@angular/common';
+import { TransactionsComponent } from './user-vet/pages/transactions/transactions.component';
+import {
+  MatCell,
+  MatCellDef,
+  MatColumnDef,
+  MatHeaderCell,
+  MatHeaderCellDef, MatHeaderRow, MatHeaderRowDef,
+  MatRow, MatRowDef,
+  MatTable
+} from "@angular/material/table";
+import {MatSort} from "@angular/material/sort";
+import {MatPaginator} from "@angular/material/paginator";
 
 // funcion para cargar los archivos de idioma
 export function createTranslateLoader(http: HttpClient) {
@@ -82,6 +94,7 @@ export function createTranslateLoader(http: HttpClient) {
     RegisterComponent,
     SwitchLanguageComponent,
     GoogleMapsDetailsComponent,
+    TransactionsComponent,
   ],
   imports: [
     BrowserModule,
@@ -114,6 +127,18 @@ export function createTranslateLoader(http: HttpClient) {
     MatSelectModule,
     MatFormFieldModule,
     GoogleMapsModule,
+    MatTable,
+    MatSort,
+    MatColumnDef,
+    MatHeaderCell,
+    MatCell,
+    MatCellDef,
+    MatHeaderCellDef,
+    MatRow,
+    MatHeaderRow,
+    MatPaginator,
+    MatHeaderRowDef,
+    MatRowDef,
   ],
   providers: [provideAnimationsAsync(), VetCenterService, CurrencyPipe],
   bootstrap: [AppComponent],
