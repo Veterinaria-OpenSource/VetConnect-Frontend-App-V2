@@ -1,6 +1,6 @@
 <div class="table-container">
   <h2>Transactions</h2>
-  <div>
+  <div class="table-wrapper">
   <table mat-table [dataSource]="dataSource" matSort>
 
     <!-- Definición de la columna ID -->
@@ -51,7 +51,7 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 
-  <!-- Paginador -->
-  <mat-paginator class="paginator" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
   </div>
+  <mat-paginator class="paginator" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
 </div>
