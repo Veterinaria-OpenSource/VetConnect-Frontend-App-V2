@@ -1,0 +1,11 @@
+<div class="appointment-list">
+  <h2>Próximas Citas</h2>
+  <div *ngFor="let appointment of appointments" class="appointment-item">
+    <mat-icon>{{ appointment.icon }}</mat-icon>
+    <div>
+      <div>{{ appointment.name }}</div>
+      <div>{{ appointment.day }}</div>
+      <div>{{ appointment.time }}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+.appointment-list {
+  background-color: #e0f7fa;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.appointment-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  background-color: #b2ebf2;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.appointment-item mat-icon {
+  font-size: 40px;
+  margin-right: 16px;
+}
+
+.appointment-item div {
+  display: flex;
+  flex-direction: column;
+}

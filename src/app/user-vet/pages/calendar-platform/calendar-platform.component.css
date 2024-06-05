@@ -1,0 +1,21 @@
+.calendario-container {
+  padding: 16px;
+}
+
+table {
+  width: 100%;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 8px;
+}
+
+.mat-header-cell {
+  background-color: #e0f7fa;
+}
+
+.mat-cell {
+  border-bottom: 1px solid #ccc;
+}

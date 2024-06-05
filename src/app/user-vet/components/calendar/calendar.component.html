@@ -1,0 +1,93 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <ng-container matColumnDef="hora">
+    <th mat-header-cell *matHeaderCellDef>Hora</th>
+    <td mat-cell *matCellDef="let element">{{ element.hora }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="lunes">
+    <th mat-header-cell *matHeaderCellDef>
+      Lunes <br />
+      {{ weekDates[0] }}
+    </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-button (click)="scheduleAppointment(element, 'lunes', 0)">
+        {{ element.lunes }}
+      </button>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="martes">
+    <th mat-header-cell *matHeaderCellDef>
+      Martes <br />
+      {{ weekDates[1] }}
+    </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-button (click)="scheduleAppointment(element, 'martes', 1)">
+        {{ element.martes }}
+      </button>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="miercoles">
+    <th mat-header-cell *matHeaderCellDef>
+      Miércoles <br />
+      {{ weekDates[2] }}
+    </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-button (click)="scheduleAppointment(element, 'miercoles', 2)">
+        {{ element.miercoles }}
+      </button>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="jueves">
+    <th mat-header-cell *matHeaderCellDef>
+      Jueves <br />
+      {{ weekDates[3] }}
+    </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-button (click)="scheduleAppointment(element, 'jueves', 3)">
+        {{ element.jueves }}
+      </button>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="viernes">
+    <th mat-header-cell *matHeaderCellDef>
+      Viernes <br />
+      {{ weekDates[4] }}
+    </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-button (click)="scheduleAppointment(element, 'viernes', 4)">
+        {{ element.viernes }}
+      </button>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="sabado">
+    <th mat-header-cell *matHeaderCellDef>
+      Sábado <br />
+      {{ weekDates[5] }}
+    </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-button (click)="scheduleAppointment(element, 'sabado', 5)">
+        {{ element.sabado }}
+      </button>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="domingo">
+    <th mat-header-cell *matHeaderCellDef>
+      Domingo <br />
+      {{ weekDates[6] }}
+    </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-button (click)="scheduleAppointment(element, 'domingo', 6)">
+        {{ element.domingo }}
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
