@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 .main-container {
   display: flex;
   justify-content: space-between;
@@ -105,7 +105,7 @@
   margin-bottom: 5px;
 }
 
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
 
 .mat-icon {
   font-size: 24px;

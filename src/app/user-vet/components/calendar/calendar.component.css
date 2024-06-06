@@ -1,4 +1,8 @@
-.scheduled {
+.highlight {
+  background-color: var(--kt-bg-orange);
+}
+
+/* .scheduled {
   background-color: yellow;
   cursor: pointer;
 }
@@ -35,4 +39,4 @@ td {
 
 .mat-cell {
   border-bottom: 1px solid #ccc;
-}
+} */

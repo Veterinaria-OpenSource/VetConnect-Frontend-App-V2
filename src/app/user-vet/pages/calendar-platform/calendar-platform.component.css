@@ -1,21 +1,13 @@
-.calendario-container {
-  padding: 16px;
+.calendar-state {
+  display: flex;
+  flex-direction: column;
 }
 
-table {
-  width: 100%;
-}
-
-th,
-td {
-  text-align: center;
-  padding: 8px;
-}
-
-.mat-header-cell {
-  background-color: #e0f7fa;
-}
-
-.mat-cell {
-  border-bottom: 1px solid #ccc;
+.container-calendar {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  justify-content: space-evenly;
+  gap: 5rem;
 }
