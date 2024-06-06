@@ -8,17 +8,17 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ProfileDetailsComponent {
   profileForm: FormGroup;
-  userImage: string = 'assets/img/user.png'; // Ruta de la imagen por defecto
+  userImage: string = 'assets/img/user.png';
 
   constructor(private fb: FormBuilder) {
     this.profileForm = this.fb.group({
-      fullName: ['John Doe', Validators.required], // Nombre por defecto
+      fullName: ['John Doe', Validators.required],
       password: ['password', Validators.required],
       mobileNumber: [
-        '1234567890',
-        [Validators.required, Validators.pattern('[0-9]{10}')],
+        '123456789',
+        [Validators.required, Validators.pattern('[0-9]{9}')],
       ],
-      userImage: [this.userImage, Validators.required], // Imagen por defecto
+      userImage: [this.userImage, Validators.required],
     });
   }
 
