@@ -46,9 +46,18 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 
+// profile-details
+import { ReactiveFormsModule } from '@angular/forms'; // Asegúrate de importar esto
+
 // paginas del dominio user-pet
 import { CurrencyPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import {
+  MatDialogActions,
+  MatDialogClose,
+  MatDialogContent,
+  MatDialogTitle,
+} from '@angular/material/dialog';
 import { MatFormField, MatLabel } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
 import { MatPaginator } from '@angular/material/paginator';
@@ -87,6 +96,7 @@ import { VetCenterDetailComponent } from './user-pet/pages/vet-center-detail/vet
 import { VetCenterService } from './user-pet/services/vet-center.service';
 import { AppointmentListComponent } from './user-vet/components/appointment-list/appointment-list.component';
 import { CalendarComponent } from './user-vet/components/calendar/calendar.component';
+import { ModalAppointmentComponent } from './user-vet/components/modal-appointment/modal-appointment.component';
 import { CalendarPlatformComponent } from './user-vet/pages/calendar-platform/calendar-platform.component';
 import { TransactionsComponent } from './user-vet/pages/transactions/transactions.component';
 // funcion para cargar los archivos de idioma
@@ -117,8 +127,10 @@ export function createTranslateLoader(http: HttpClient) {
     SwitchLanguageComponent,
     GoogleMapsDetailsComponent,
     TransactionsComponent,
+    ModalAppointmentComponent,
   ],
   imports: [
+    ReactiveFormsModule,
     MatButtonToggle,
     MatButtonToggleGroup,
     MatButtonToggleModule,
@@ -172,6 +184,10 @@ export function createTranslateLoader(http: HttpClient) {
     MatPaginator,
     MatHeaderRowDef,
     MatRowDef,
+    MatDialogActions,
+    MatDialogContent,
+    MatDialogTitle,
+    MatDialogClose,
   ],
   providers: [provideAnimationsAsync(), VetCenterService, CurrencyPipe],
   bootstrap: [AppComponent],

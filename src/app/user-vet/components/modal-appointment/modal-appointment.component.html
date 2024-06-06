@@ -1,0 +1,20 @@
+<div class="modal-container">
+  <h2 mat-dialog-title class="title">{{data.appointmentType}}</h2>
+  <div class="image-service-container">
+    <div class="image">
+      <img src="../../../../assets/img/calendar_date.png">
+    </div>
+  </div>
+<mat-dialog-content>
+  <h2>Fecha: </h2>
+  <p>{{data.dia}}</p>
+  <h2>Hora:</h2>
+  <p>{{data.hora}}</p>
+  <h2>Informacion adicional:</h2>
+  <p>Ninguna</p>
+</mat-dialog-content>
+  <div class="actions-container">
+        <button class="cancel" mat-button mat-dialog-close>Cancelar cita </button>
+        <button class="confirm" mat-button mat-dialog-close>Aceptar</button>
+  </div>
+</div>

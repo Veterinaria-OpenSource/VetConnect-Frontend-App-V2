@@ -6,6 +6,8 @@ import {
   ELEMENT_DATA_CHEQUEOS,
   ELEMENT_DATA_VACUNAS,
 } from '../../../shared/data/appointments';
+import {MatDialog} from "@angular/material/dialog";
+import {ModalAppointmentComponent} from "../modal-appointment/modal-appointment.component";
 @Component({
   selector: 'app-calendar',
   templateUrl: './calendar.component.html',
@@ -27,7 +29,7 @@ export class CalendarComponent {
     'domingo',
   ];
 
-  constructor(private snackBar: MatSnackBar) {}
+  constructor(public dialog: MatDialog) {}
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['selectedCategory']) {
@@ -66,12 +68,19 @@ export class CalendarComponent {
         appointmentType = 'Cita';
     }
     const date = this.weekDates[dayIndex];
-    this.snackBar.open(
+    this.dialog.open(ModalAppointmentComponent, {
+      data: {
+        appointmentType: `${appointmentType}`,
+        hora: `${element.hora}`,
+        dia: `${day} ${date}`
+      },
+    });
+    /*this.snackBar.open(
       `Agendado: ${appointmentType} a las ${element.hora} el ${day} (${date})`,
       'Cerrar',
       {
         duration: 2000,
       }
-    );
+    );*/
   }
 }
