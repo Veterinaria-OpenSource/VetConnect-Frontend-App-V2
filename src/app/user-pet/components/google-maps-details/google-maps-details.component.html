@@ -1,6 +1,11 @@
 <mat-card class="google-maps-container-card">
   <mat-card-content class="card-content">
-    <google-map class="google-maps-item" [center]="center" [zoom]="zoom">
-    </google-map>
+    <div class="map-container">
+      <google-map
+        class="google-maps-item"
+        [center]="center"
+        [zoom]="zoom"
+      ></google-map>
+    </div>
   </mat-card-content>
 </mat-card>
