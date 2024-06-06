@@ -19,21 +19,21 @@ export class CalendarPlatformComponent {
         day: 'Wednesday',
         time: item.hora,
         name: 'Nombre y Apellido',
-        icon: 'assignment',
+        icon: 'assets/img/calendar_date.png',
       }));
     } else if (this.selectedCategory === 'banos') {
       return ELEMENT_DATA_BANOS.map((item: any) => ({
         day: 'Wednesday',
         time: item.hora,
         name: 'Nombre y Apellido',
-        icon: 'bathtub',
+        icon: 'assets/img/calendar_date.png',
       }));
     } else {
       return ELEMENT_DATA_VACUNAS.map((item: any) => ({
         day: 'Wednesday',
         time: item.hora,
         name: 'Nombre y Apellido',
-        icon: 'healing',
+        icon: 'assets/img/calendar_date.png',
       }));
     }
   }
