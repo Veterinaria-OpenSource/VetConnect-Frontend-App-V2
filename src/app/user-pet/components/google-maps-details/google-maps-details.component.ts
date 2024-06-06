@@ -1,11 +1,11 @@
-import { Component, ElementRef } from '@angular/core';
+import { AfterViewInit, Component, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-google-maps-details',
   templateUrl: './google-maps-details.component.html',
-  styleUrl: './google-maps-details.component.css',
+  styleUrls: ['./google-maps-details.component.css'],
 })
-export class GoogleMapsDetailsComponent {
+export class GoogleMapsDetailsComponent implements AfterViewInit {
   lat: number = 51.678418;
   lng: number = 7.809007;
   zoom: number = 16;
@@ -14,13 +14,14 @@ export class GoogleMapsDetailsComponent {
   width: string = '100%';
 
   center: google.maps.LatLngLiteral = { lat: this.lat, lng: this.lng };
-  constructor(private elRef: ElementRef) {}
+
+  constructor(private renderer: Renderer2) {}
 
   ngAfterViewInit() {
-    const mapContainer =
-      this.elRef.nativeElement.querySelector('.map-container');
+    const mapContainer = document.querySelector('.map-container');
     if (mapContainer) {
-      mapContainer.style.width = '100%';
+      this.renderer.setStyle(mapContainer, 'width', this.width);
+      this.renderer.setStyle(mapContainer, 'height', this.height);
     }
   }
 }
