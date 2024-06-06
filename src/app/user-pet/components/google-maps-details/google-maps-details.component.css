@@ -1,0 +1,22 @@
+.google-maps-container-card {
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  /* overflow: hidden; */
+}
+
+.google-maps-item {
+  max-width: 500px;
+  width: 100%;
+}
+
+.map-container {
+  width: 100% !important;
+  height: 400px; /* Valor por defecto */
+  position: relative;
+  overflow: hidden;
+}
+
+.google-maps-item div.map-container {
+  width: 100% !important;
+}

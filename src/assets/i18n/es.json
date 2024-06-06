@@ -1,0 +1,33 @@
+{
+    "toolbar": {
+        "buttonLanguage": "Idioma",
+        "languagePrimary": "Español",
+        "languageSecondary": "Ingles"
+    },
+
+    "Vet": {
+        
+        "DescriptionProfile": {
+            "TitleProfile": "Descripcion del Perfil"
+        }
+    },
+
+    "VetCard":{
+        "Address": "Direccion",
+        "Consulta": "Consulta Clinica",
+        "Banio": "Baño"
+    },
+
+    "TimeCard":{
+        "Today": "Hoy",
+        "Tomorrow": "Mañana"
+    },
+
+    "VetServiceProfile":{
+        "TitleService": "Servicios de la Veterinaria"
+    },
+
+    "VetOpinionOfClient":{
+        "TitleOpinion": "Opiniones de los clientes"
+    }
+}

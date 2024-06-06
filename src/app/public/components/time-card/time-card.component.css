@@ -1,7 +1,10 @@
 .time-card {
   background-color: var(--kt-bg-card);
   padding: 1rem 4rem 2rem 4rem;
-  box-shadow: var(--kt-bg-dark) 0 0 4px;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  max-width: fit-content;
+  max-height: 62rem;
   & .day {
     & > h3 {
       font-size: 2rem;

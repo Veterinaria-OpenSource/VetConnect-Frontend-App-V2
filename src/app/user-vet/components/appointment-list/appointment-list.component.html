@@ -1,0 +1,26 @@
+<div class="appointment-list">
+  <h2>Próximas Citas</h2>
+  <div class="appointment">
+    <div *ngFor="let appointment of appointments" class="appointment-item">
+      <picture class="container-img">
+        <img
+          *ngIf="appointment.icon"
+          [src]="appointment.icon"
+          alt="icon"
+          width="50"
+          height="50"
+        />
+      </picture>
+      <div class="appointment-item-info">
+        <div class="info">
+          <img src="assets/img/user.png" alt="user for default" />
+          <h3>{{ appointment.name }}</h3>
+        </div>
+        <p>
+          <span>{{ appointment.day }}</span>
+          <span>{{ appointment.time }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

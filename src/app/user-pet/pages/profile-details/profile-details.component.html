@@ -1,38 +1,53 @@
-<div class="flex-container">
+<section class="container-profile">
   <div class="user-card">
     <div class="image-upload-container">
-      <img src="  " class="user-image" />
-      <button mat-raised-button class="upload-button">Upload</button>
+      <img [src]="userImage" class="user-image" />
+      <input type="file" (change)="onFileSelected($event)" hidden #fileInput />
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="fileInput.click()"
+        class="upload-button"
+      >
+        Upload
+      </button>
     </div>
 
-    <div class="user-details">
-      <h4>Name</h4>
-      <div class="input-group">
-        <label for="fullName"></label>
-        <input type="text" id="fullName" />
-        <button mat-icon-button>
-          <mat-icon>✎</mat-icon>
-        </button>
-      </div>
+    <form [formGroup]="profileForm" class="user-details">
+      <mat-form-field appearance="fill">
+        <mat-label>Full Name</mat-label>
+        <input matInput id="fullName" formControlName="fullName" />
+      </mat-form-field>
 
-      <h4>Password</h4>
-      <div class="input-group">
-        <label for="password"></label>
-        <input type="password" id="password" />
-        <button mat-icon-button>
-          <mat-icon>✎</mat-icon>
-        </button>
-      </div>
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          type="password"
+          id="password"
+          formControlName="password"
+        />
+      </mat-form-field>
 
-      <h4>Mobile Number</h4>
-      <div class="input-group">
-        <label for="mobileNumber"></label>
-        <input type="tel" id="mobileNumber" />
-        <button mat-icon-button>
-          <mat-icon>✎</mat-icon>
-        </button>
-      </div>
-    </div>
+      <mat-form-field appearance="fill">
+        <mat-label>Mobile Number</mat-label>
+        <input
+          matInput
+          type="tel"
+          id="mobileNumber"
+          formControlName="mobileNumber"
+        />
+      </mat-form-field>
+
+      <input type="hidden" formControlName="userImage" />
+    </form>
   </div>
-  <button mat-raised-button class="save-button">ACEPTAR Y GUARDAR</button>
-</div>
+  <button
+    mat-raised-button
+    color="primary"
+    class="save-button"
+    (click)="onSave()"
+  >
+    ACEPTAR Y GUARDAR
+  </button>
+</section>

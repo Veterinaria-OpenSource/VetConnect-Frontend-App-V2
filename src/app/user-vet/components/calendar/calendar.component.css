@@ -1,0 +1,42 @@
+.highlight {
+  background-color: var(--kt-bg-orange);
+}
+
+/* .scheduled {
+  background-color: yellow;
+  cursor: pointer;
+}
+
+.non-clickable {
+  background-color: rgb(255, 255, 255);
+  pointer-events: none;
+}
+
+table,
+td,
+tr,
+th {
+  border: 1px solid #000;
+}
+
+.mat-mdc-table .mat-mdc-header-cell {
+  width: 20px !important;
+}
+
+.calendario-container {
+  padding: 1rem;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 8px;
+}
+
+.mat-header-cell {
+  background-color: #e0f7fa;
+}
+
+.mat-cell {
+  border-bottom: 1px solid #ccc;
+} */

@@ -1,0 +1,17 @@
+<section class="container-calendar">
+  <div class="calendar">
+    <div class="calendar-state">
+      <div>
+        <mat-button-toggle-group [(ngModel)]="selectedCategory">
+          <mat-button-toggle value="chequeos">Chequeos</mat-button-toggle>
+          <mat-button-toggle value="banos">Baños</mat-button-toggle>
+          <mat-button-toggle value="vacunas">Vacunas</mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+      <app-calendar [selectedCategory]="selectedCategory"></app-calendar>
+    </div>
+    <app-appointment-list
+      [appointments]="getAppointments()"
+    ></app-appointment-list>
+  </div>
+</section>

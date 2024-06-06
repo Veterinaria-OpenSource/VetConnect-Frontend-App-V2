@@ -1,52 +1,99 @@
-.vet-center-list-card {
-  margin-top: 3rem;
+/* .main-vet-details {
+  max-width: none;
+} */
+
+.vet-details-list-card {
   display: flex;
-  justify-content: space-between;
   gap: 2rem;
+  padding: 5rem 0;
 }
 
-.map-container {
-  max-width: 400px;
-  max-height: 430px;
-  padding: 2rem 4rem;
+.vet-details-card {
+  max-width: 48rem;
+}
+
+.vet-details-time-card {
+  max-width: 40rem;
+}
+
+/**-----card para la descripcion de la ve------*/
+.vet-details-profile-description {
+  max-width: 980px;
+  padding: 2rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+
+.vet-details-profile-description p {
+  font-size: 1.7rem;
+}
+
+/**-----card para los servicios------*/
+.vet-details-profile-services {
+  margin-top: 2rem;
+  max-width: 980px;
+  padding: 2rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+
+.vet-details-profile-services p {
+  font-size: 1.7rem;
+}
+
+/**-----card para las opiniones------*/
+.vet-details-profile-opinions {
+  margin: 20px 0;
+  padding: 20px;
   background-color: var(--kt-bg-card);
-  box-shadow: var(--kt-bg-dark) 0 0 4px;
-  align-items: center; /*** Add this line ***/
-  justify-content: center;/*** Add this line ***/
+  max-width: 980px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+
+.review {
+  border-bottom: 1px solid var(--kt-bg-card); /* Add separacion entre opiniones */
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.review:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.review h5 {
+  margin: 0 0 5px 0; /* Title spacing */
+  color: var(--kt-bg-green);
+}
+
+.review-date {
+  font-size: 14px;
+  color: var(--kt-bg-green);
+}
+
+.review p {
+  font-size: 16px; /* Adjust size as necessary */
+  color: var(--kt-bg-green); /* Text color */
 }
 
 .map-button {
-  margin-top: 10px;
-  background-color: #176A56;
-  color: #E8FFF9;
-  border: none;
-  padding: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.button{
   text-align: center;
 }
 
-.map-container img {
-  max-width: 100%; /* La imagen no se extenderá más allá de su tamaño original */
-  max-height: 100%; /* La imagen no se extenderá más allá de su tamaño original */
-}
+/* .google-maps-container {
+  max-width: 500px;
+  width: 100%;
+} */
 
-.time-card-container{
-  max-height: 3rem;
-}
+@media screen and (max-width: 768px) {
+  .vet-details-list-card {
+    flex-direction: column;
+  }
 
-.vet-description-container {
-  margin-top: 2rem;
-  padding: 2rem;
-  background-color: var(--kt-bg-card); /* Ajusta el color de fondo según tu paleta de colores */
-  box-shadow: var(--kt-bg-dark) 0 0 4px;
-  max-width: 82rem;
-}
-
-.vet-description {
-  color: #333; /* Cambia el color del texto si es necesario */
-  font-size: 16px; /* Ajusta el tamaño del texto según prefieras */
+  /*   
+  .google-maps-container {
+    max-width: 50rem;
+  } */
 }

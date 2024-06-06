@@ -3,12 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --kt-bg-base: #fff8ee;
+  --kt-bg-base: #fef1de;
   --kt-bg-dark: #191919;
+  --kt-bg-orange: #ffbb57;
   --kt-bg-card: #ffffff;
   --kt-bg-green: #196c58;
+  --kt-bg-green-light: #0abb92;
   --kt-bg-light: #fefefe;
   --kt-bg-btn: #eafbf6;
+  --mat-standard-button-toggle-selected-state-text-color: #fff;
 }
 header,
 nav,
@@ -81,12 +84,11 @@ html {
 
 body {
   background-color: var(--kt-bg-base);
-  /* color: var(--default); */
+  color: var(--default);
 }
 
 main {
-  width: 100%;
-  padding: 0 5rem;
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
