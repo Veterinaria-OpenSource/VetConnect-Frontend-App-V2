@@ -5,6 +5,52 @@
         "languageSecondary": "English"
     },
 
+    "login": {
+        "title": "Login",
+        "description": "Register your details to enter VetConnect",
+        "email": "Email",
+        "password": "Password",
+        "buttonLogin": "Login",
+        "buttonRegister": "Register"
+    },
+
+    "register": {
+        "title": "Register",
+        "description": "Register your data to login to VetConnect",
+        "client": "Customer",
+        "vet": "Veterinary Clinic",
+
+        "placeholderName": "Enter your name",
+        "placeholderNameVet": "Enter the name of the veterinary clinic",
+        "placeholderDNI": "Enter your DNI",
+        "placeholderEmail": "Enter your email",
+        "placeholderRUC": "Enter your RUC",
+        "placeholderPhone": "Enter your phone",
+        "placeholderPassword": "Enter your password",
+        "placeholderConfirmPassword": "Confirm your password"
+    },
+
+    "registerCustomer": {
+        "name": "Name",
+        "DNI": "DNI",
+        "email": "Email",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "buttonRegister": "Register",
+        "buttonLogin": "Login"
+    },
+
+    "registerVet": {
+        "name": "Name",
+        "email": "Email",
+        "ruc": "RUC",
+        "phone": "Phone",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "buttonRegister": "Register",
+        "buttonLogin": "Login"
+    },
+
     "Vet": {
         "DescriptionProfile": {
             "TitleProfile": "Description Profile"
