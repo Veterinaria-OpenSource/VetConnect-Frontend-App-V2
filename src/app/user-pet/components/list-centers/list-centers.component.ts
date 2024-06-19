@@ -5,10 +5,11 @@ import { VetCenterService } from '../../services/vet-center.service';
 @Component({
   selector: 'list-centers',
   templateUrl: './list-centers.component.html',
-  styleUrl: './list-centers.component.css',
+  styleUrls: ['./list-centers.component.css'],
 })
 export class ListCentersComponent implements OnInit {
   vetCenters: IVetCenter[] = [];
+
 
   constructor(private apiVetCenterService: VetCenterService) {}
 
@@ -20,5 +21,9 @@ export class ListCentersComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllVetCenters();
+  }
+
+  trackById(index: number, item: IVetCenter): number {
+    return item.id;
   }
 }
