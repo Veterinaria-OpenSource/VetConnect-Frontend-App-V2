@@ -1,6 +1,12 @@
 mat-toolbar {
   background-color: var(--kt-bg-green);
-  color: var(--kt-text-white);
+  color: var(--kt-bg-card);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.451);
+  padding: 0 1rem;
+  height: 4.5rem;
+  display: flex;
+  justify-content: space-between;
+
 }
 
 
