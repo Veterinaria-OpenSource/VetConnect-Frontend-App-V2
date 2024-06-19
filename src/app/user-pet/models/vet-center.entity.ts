@@ -11,5 +11,5 @@ export interface IVetCenter {
   direction: string;
   description: string;
   services: string;
-  id: string;
+  id: number;
 }
