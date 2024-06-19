@@ -1,7 +1,19 @@
+.container {
+  display: flex;
+  align-items: flex-start; /* Asegura que los elementos se alineen en la parte superior */
+  gap: 20px; /* Espacio entre los elementos */
+  margin: auto;
+  margin-top: 3rem;
+}
+
 .container-cards {
   display: flex;
-  /* justify-content: space-between; */
-  gap: 2rem;
+  gap: 3rem;
   flex-wrap: wrap;
-  padding: 5rem 0;
+}
+
+.list-article {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
 }
