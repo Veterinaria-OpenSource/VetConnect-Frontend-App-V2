@@ -1,11 +1,10 @@
+<app-search-filter (searchChange)="updateSearch($event)"></app-search-filter>
 <div class="container">
   <div class="list-article">
-    @for (vetCenter of vetCenters; track vetCenter.id) {
-      <article class="container-cards">
-        <card [vetCenter]="vetCenter"></card>
-        <time-card></time-card>
-      </article>
-    }
+    <article class="container-cards" *ngFor="let vetCenter of vetCenters | filter:searchText; trackBy: trackById">
+      <card [vetCenter]="vetCenter"></card>
+      <time-card></time-card>
+    </article>
   </div>
   <app-card-insurance></app-card-insurance>
 </div>

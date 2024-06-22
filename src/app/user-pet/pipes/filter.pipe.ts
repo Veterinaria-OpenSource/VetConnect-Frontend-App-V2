@@ -1,12 +1,27 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { IVetCenter } from '../models/vet-center.entity';
 
 @Pipe({
   name: 'filter'
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+
+  transform(vetCenters: IVetCenter[], search: string): IVetCenter[]  {
+    if (!vetCenters) {
+      return [];
+    }
+    
+    if (!search) {
+      return vetCenters;
+    }
+
+    search = search.toLowerCase();
+    return vetCenters.filter(vetCenters => {
+      return vetCenters.clinicName.toLowerCase().includes(search);
+    });
   }
+
+
 
 }
