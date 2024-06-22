@@ -9,12 +9,15 @@ import { VetCenterService } from '../../services/vet-center.service';
 })
 export class ListCentersComponent implements OnInit {
   vetCenters: IVetCenter[] = [];
+  searchText: string = '';
 
 
-  constructor(private apiVetCenterService: VetCenterService) {}
+
+  constructor(private apiVetCenterService: VetCenterService
+  ) {}
 
   private getAllVetCenters() {
-    this.apiVetCenterService.getVetCenters().subscribe((vetCenters: any) => {
+    this.apiVetCenterService.getVetCenters().subscribe((vetCenters: IVetCenter[]) => {
       this.vetCenters = vetCenters;
     });
   }
@@ -23,7 +26,13 @@ export class ListCentersComponent implements OnInit {
     this.getAllVetCenters();
   }
 
+
+  updateSearch(searchText: string): void {
+    this.searchText = searchText;
+  }
+
   trackById(index: number, item: IVetCenter): number {
     return item.id;
   }
+  
 }

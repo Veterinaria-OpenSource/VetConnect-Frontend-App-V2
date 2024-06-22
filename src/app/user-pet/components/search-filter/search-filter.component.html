@@ -1,8 +1,13 @@
 <div class="container">
     <div class="form-group">
-        <div class="input-wrapper">
-            <i class="fas fa-search"></i>
-            <input type="text" class="form-control" placeholder="Busca tu veterinaria favorita">
-        </div>
+      <div class="input-wrapper">
+        <i class="fas fa-search"></i>
+        <input 
+          type="text" 
+          class="form-control" 
+          placeholder="Busca tu veterinaria favorita" 
+          (input)="onSearchChange($event)">
+      </div>
     </div>
-</div>
+  </div>
+  
