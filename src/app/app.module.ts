@@ -47,7 +47,10 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 
 // profile-details
-import { ReactiveFormsModule } from '@angular/forms'; // Asegúrate de importar esto
+import { ReactiveFormsModule } from '@angular/forms'; 
+
+// para el carousel
+import { CommonModule } from '@angular/common';
 
 // paginas del dominio user-pet
 import { CurrencyPipe } from '@angular/common';
@@ -102,6 +105,11 @@ import { TransactionsComponent } from './user-vet/pages/transactions/transaction
 import { CardInsuranceComponent } from './user-pet/components/card-insurance/card-insurance.component';
 import { SearchFilterComponent } from './user-pet/components/search-filter/search-filter.component';
 import { FilterPipe } from './user-pet/pipes/filter.pipe';
+
+
+
+
+
 // funcion para cargar los archivos de idioma
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');

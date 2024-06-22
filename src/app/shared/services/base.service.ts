@@ -30,9 +30,9 @@ export class BaseService<T> {
   }
 
   // get all vet centers
-  getVetCenters(): Observable<T> {
+  getVetCenters(): Observable<T[]> {
     return this.http
-      .get<T>(this.vetCenterPath())
+      .get<T[]>(this.vetCenterPath())
       .pipe(retry(2), catchError(this.handleError));
   }
 
