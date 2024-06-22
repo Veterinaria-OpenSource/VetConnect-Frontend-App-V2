@@ -1,0 +1,44 @@
+.container {
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Input Wrapper Styles */
+.input-wrapper {
+    position: relative;
+}
+
+/* Icon Styles */
+.input-wrapper i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+/* Input Styles */
+.form-control {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 1.5px rgba(77, 77, 77, 0.336);
+    transition: box-shadow 0.3s ease-in-out;
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: #aaa;
+}
+
+

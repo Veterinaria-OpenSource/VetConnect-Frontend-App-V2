@@ -85,6 +85,7 @@ html {
 body {
   background-color: var(--kt-bg-base);
   color: var(--default);
+  margin-top: 10rem;
 }
 
 main {

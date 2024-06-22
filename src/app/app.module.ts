@@ -99,6 +99,9 @@ import { CalendarComponent } from './user-vet/components/calendar/calendar.compo
 import { ModalAppointmentComponent } from './user-vet/components/modal-appointment/modal-appointment.component';
 import { CalendarPlatformComponent } from './user-vet/pages/calendar-platform/calendar-platform.component';
 import { TransactionsComponent } from './user-vet/pages/transactions/transactions.component';
+import { CardInsuranceComponent } from './user-pet/components/card-insurance/card-insurance.component';
+import { SearchFilterComponent } from './user-pet/components/search-filter/search-filter.component';
+import { FilterPipe } from './user-pet/pipes/filter.pipe';
 // funcion para cargar los archivos de idioma
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -128,6 +131,9 @@ export function createTranslateLoader(http: HttpClient) {
     GoogleMapsDetailsComponent,
     TransactionsComponent,
     ModalAppointmentComponent,
+    CardInsuranceComponent,
+    SearchFilterComponent,
+    FilterPipe,
   ],
   imports: [
     ReactiveFormsModule,

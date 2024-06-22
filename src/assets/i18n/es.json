@@ -75,5 +75,10 @@
 
     "VetOpinionOfClient":{
         "TitleOpinion": "Opiniones de los clientes"
+    },
+
+    "Insurance":{
+        "title": "Seguros",
+        "description": "¡Protege a tu mejor amigo peludo con nuestro seguro para mascotas! En un mundo lleno de sorpresas, asegura la salud y el bienestar de tu compañero de cuatro patas. Nuestro seguro ofrece cobertura integral para gastos veterinarios, desde consultas de rutina hasta emergencias inesperadas. Además, te brindamos tranquilidad con beneficios adicionales como cobertura de responsabilidad civil y servicios de atención telefónica las 24 horas. ¡No dejes la salud de tu mascota al azar!"
     }
 }

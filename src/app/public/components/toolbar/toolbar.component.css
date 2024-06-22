@@ -2,11 +2,14 @@ mat-toolbar {
   background-color: var(--kt-bg-green);
   color: var(--kt-bg-card);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.451);
-  padding: 0 1rem;
-  height: 4.5rem;
   display: flex;
   justify-content: space-between;
-
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s;
+  z-index: 1000;
+  
 }
 
 
@@ -15,6 +18,13 @@ mat-toolbar-row {
 }
 
 .logo-toolbar {
-  max-width: 22rem;
+  max-width: 10%;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .logo-toolbar {
+    max-width: 50%;
+  }
+  
 }
