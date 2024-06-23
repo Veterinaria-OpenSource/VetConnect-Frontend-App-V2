@@ -1,7 +1,10 @@
+// src/app/services/login.service.ts
+
 import { Injectable } from '@angular/core';
 import { BaseService } from '../../shared/services/base.service';
 import { HttpClient } from '@angular/common/http';
-import { Observable, catchError, map, throwError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
