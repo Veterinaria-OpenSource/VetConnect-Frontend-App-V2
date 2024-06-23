@@ -1,0 +1,39 @@
+.vet-details-profile-opinions {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: var(--kt-bg-card);
+    max-width: 980px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+  }
+  
+  .review {
+    border-bottom: 1px solid var(--kt-bg-card); /* Add separacion entre opiniones */
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .review:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  
+  .review h5 {
+    margin: 0 0 5px 0; /* Title spacing */
+    color: var(--kt-bg-green);
+  }
+  
+  .review-date {
+    font-size: 14px;
+    color: var(--kt-bg-green);
+  }
+  
+  .review p {
+    font-size: 16px; /* Adjust size as necessary */
+    color: var(--kt-bg-green); /* Text color */
+  }
+  
+  .map-button {
+    text-align: center;
+  }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { IVetCenter } from '../../models/vet-center.entity';
+import { IVetCenter } from '../../models/vet-centers/vet-center.entity';
 import { VetCenterService } from '../../services/vet-center.service';
 
 @Component({

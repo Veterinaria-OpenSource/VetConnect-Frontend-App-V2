@@ -105,6 +105,7 @@ import { TransactionsComponent } from './user-vet/pages/transactions/transaction
 import { CardInsuranceComponent } from './user-pet/components/card-insurance/card-insurance.component';
 import { SearchFilterComponent } from './user-pet/components/search-filter/search-filter.component';
 import { FilterPipe } from './user-pet/pipes/filter.pipe';
+import { VetCenterReviewsComponent } from './user-pet/components/vet-center-reviews/vet-center-reviews.component';
 
 
 
@@ -142,6 +143,7 @@ export function createTranslateLoader(http: HttpClient) {
     CardInsuranceComponent,
     SearchFilterComponent,
     FilterPipe,
+    VetCenterReviewsComponent,
   ],
   imports: [
     ReactiveFormsModule,

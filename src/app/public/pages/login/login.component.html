@@ -1,29 +1,24 @@
 <div class="login">
   <div class="min-h-screen flex items-center justify-center">
     <div class="bg-anaranjado flex flex-col container mx-auto px-4 py-8 text-center rounded-xl shadow-lg max-w-xl">
-
-      <div class="bg-anaranjado flex flex-col px-10 py-8 text-center rounded-xl  max-w-xl mx-4">
+      <div class="bg-anaranjado flex flex-col px-10 py-8 text-center rounded-xl max-w-xl mx-4">
         <h1 class="text-3xl font-bold mb-2">{{"login.title" | translate}}</h1>
         <p class="text-lg">{{"login.description" | translate}}</p>
       </div>
-
       <div class="mt-6">
-        <form class="flex flex-col items-center">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="flex flex-col items-center">
           <mat-form-field class="mb-4 w-full md:w-96">
             <mat-label class="text-md">{{"login.email" | translate}}</mat-label>
-            <input matInput type="email" id="email" name="email" [placeholder]="'register.placeholderEmail' | translate" />
+            <input matInput formControlName="username" type="text" id="username" name="username" [placeholder]="'register.placeholderEmail' | translate" />
           </mat-form-field>
-
           <mat-form-field class="mb-6 w-full md:w-96">
             <mat-label class="text-md">{{"login.password" | translate}}</mat-label>
-            <input matInput type="password" id="password" name="password" [placeholder]="'register.placeholderPassword' | translate" />
+            <input matInput formControlName="password" type="password" id="password" name="password" [placeholder]="'register.placeholderPassword' | translate" />
           </mat-form-field>
-
-          <button mat-raised-button routerLink="/home" color="accent" class="w-full max-w-md py-3 px-4 rounded" style="background-color: #2dd4bf;">
+          <button mat-raised-button type="submit" color="accent" class="w-full max-w-md py-3 px-4 rounded" style="background-color: #2dd4bf;">
             {{ "login.buttonLogin" | translate }}
           </button><br>
-
-          <button mat-raised-button routerLink="/register" color="accent" class="w-full max-w-md py-3 px-4 rounded" style="background-color: #9a5d01;">
+          <button mat-raised-button type="button" (click)="signUp()" color="accent" class="w-full max-w-md py-3 px-4 rounded" style="background-color: #9a5d01;">
             {{ "login.buttonRegister" | translate }}
           </button>
         </form>
@@ -31,3 +26,4 @@
     </div>
   </div>
 </div>
+

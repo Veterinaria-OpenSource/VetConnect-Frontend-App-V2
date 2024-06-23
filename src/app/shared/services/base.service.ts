@@ -5,10 +5,16 @@ import { catchError, Observable, retry, throwError } from 'rxjs';
   providedIn: 'root',
 })
 export class BaseService<T> {
-  basePath: string = 'https://662af7eade35f91de156e1c5.mockapi.io/api/v1';
-  vetCenterEndpoint: string = '/vetCenter';
+  basePath: string = 'http://localhost:8080/api/v1';
+  resourceEndpoint: string = '';
 
-  constructor(private http: HttpClient) {}
+  httpOptions = {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
+
+  constructor(public http: HttpClient) {}
 
   handleError(error: HttpErrorResponse) {
     // Default error handling
@@ -25,8 +31,14 @@ export class BaseService<T> {
     );
   }
 
+  // path to vet centers
   private vetCenterPath(): string {
-    return `${this.basePath}${this.vetCenterEndpoint}`;
+    return `${this.basePath}${this.resourceEndpoint}`;
+  }
+
+  // path to vet center by id
+  private vetCenterByIdPath(id: string): string {
+    return `${this.vetCenterPath()}/${id}`;
   }
 
   // get all vet centers
@@ -41,4 +53,18 @@ export class BaseService<T> {
       .get<T>(`${this.vetCenterPath()}/${id}`)
       .pipe(retry(2), catchError(this.handleError));
   }
+
+  // get reviews by vet center id
+  getReviewsByVetCenterId(vetCenterId: number): Observable<T[]> {
+    return this.http
+      .get<T[]>(`${this.basePath}${this.resourceEndpoint}/${vetCenterId}`).pipe(retry(2), catchError(this.handleError));
+  }
+
+  // get pet owners by id
+  getPetOwnerById(id: number): Observable<T> {
+    return this.http
+      .get<T>(`${this.basePath}${this.resourceEndpoint}/${id}`)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
 }
