@@ -1,13 +1,12 @@
+<!-- src/app/public/pages/register/register.component.html -->
 <div class="bg-cover bg-center min-h-screen flex items-center justify-center" style="background-image: url('./assets/img/fondo.png');">
   <div class="bg-anaranjado flex flex-col container mx-auto px-10 py-8 text-center rounded-xl shadow-lg max-w-xl">
-
     <!-- Formulario central -->
-    <div class="bg-anaranjado flex flex-col px-10 py-8 text-center rounded-xl  max-w-xl mx-4">
+    <div class="bg-anaranjado flex flex-col px-10 py-8 text-center rounded-xl max-w-xl mx-4">
       <div>
         <h1 class="text-5xl font-bold mb-2">{{"register.title" | translate}}</h1>
         <p class="text-lg">{{"register.description" | translate}}</p>
       </div>
-
       <div class="mt-6">
         <div class="flex gap-4 justify-center mb-6">
           <button mat-raised-button color="accent" class="text-white font-bold py-2 px-4 rounded"
@@ -17,92 +16,91 @@
                   [ngClass]="{'bg-turquesaa': selectedForm === 'empresa', 'bg-gray-300 hover:bg-gray-400': selectedForm !== 'empresa'}"
                   (click)="toggleForm('empresa')">{{"register.vet" | translate}}</button>
         </div>
-
-      <!-- Formulario de Cliente -->
-      <form *ngIf="selectedForm === 'cliente'" class="mt-2">
-        <div class="grid grid-cols-2 gap-4">
-          <mat-form-field appearance="fill" class="col-span-1">
-            <mat-label>{{"registerCustomer.name" | translate}}</mat-label>
-            <input matInput type="text" id="name" name="name" [placeholder]="'register.placeholderName' | translate" />
-          </mat-form-field>
-
-          <mat-form-field appearance="fill" class="col-span-1">
-            <mat-label>{{"registerCustomer.DNI" | translate}}</mat-label>
-            <input matInput type="text" id="dni" name="dni" [placeholder]="'register.placeholderDNI' | translate" />
-          </mat-form-field>
-        </div>
-
-        <div class="grid grid-cols-1 gap-4">
-          <mat-form-field appearance="fill">
-            <mat-label>{{"registerCustomer.email" | translate}}</mat-label>
-            <input matInput type="email" id="email" name="email" [placeholder]="'register.placeholderEmail' | translate" />
-          </mat-form-field>
-
-          <mat-form-field appearance="fill">
-            <mat-label>{{"registerCustomer.password" | translate}}</mat-label>
-            <input matInput type="password" id="password" name="password" [placeholder]="'register.placeholderPassword' | translate" />
-          </mat-form-field>
-
-          <mat-form-field appearance="fill">
-            <mat-label>{{"registerCustomer.confirmPassword" | translate}}</mat-label>
-            <input matInput type="password" id="confirmPassword" name="confirmPassword" [placeholder]="'register.placeholderConfirmPassword' | translate" />
-          </mat-form-field>
-        </div>
-
-        <button mat-raised-button color="accent" class="w-full max-w-md py-3 px-4 rounded" style="background-color: #2dd4bf;">
-          {{"registerCustomer.buttonRegister" | translate}}
-        </button><br><br>
-
-        <button mat-raised-button routerLink="/login" color="accent" class="w-full max-w-md py-3 px-4 rounded" style="background-color: #9a5d01;">
-          {{"registerCustomer.buttonLogin" | translate}}
-        </button>
-      </form>
-
-      <!-- Formulario de Empresa -->
-      <form *ngIf="selectedForm === 'empresa'" class="mt-2">
-        <div class="grid grid-cols-2 gap-4 mb-4">
-          <mat-form-field appearance="fill" class="col-span-2">
-            <mat-label>{{"registerVet.name" | translate}}</mat-label>
-            <input matInput type="text" id="name" name="name" [placeholder]="'register.placeholderNameVet' | translate" />
-          </mat-form-field>
-
-          <mat-form-field appearance="fill" class="col-span-1">
-            <mat-label>{{"registerVet.email" | translate}}</mat-label>
-            <input matInput type="email" id="email" name="email" [placeholder]="'register.placeholderEmail' | translate" />
-          </mat-form-field>
-
-          <mat-form-field appearance="fill" class="col-span-1">
-            <mat-label>{{"registerVet.ruc" | translate}}</mat-label>
-            <input matInput type="text" id="ruc" name="ruc" [placeholder]="'register.placeholderRUC' | translate" />
-          </mat-form-field>
-
-          <mat-form-field appearance="fill" class="col-span-1">
-            <mat-label>{{"registerVet.phone" | translate}}</mat-label>
-            <input matInput type="text" id="phone" name="phone" [placeholder]="'register.placeholderPhone' | translate" />
-          </mat-form-field>
-
-          <mat-form-field appearance="fill" class="col-span-1">
-            <mat-label>{{"registerVet.password" | translate}}</mat-label>
-            <input matInput type="password" id="password" name="password" [placeholder]="'register.placeholderPassword' | translate" />
-          </mat-form-field>
-
-          <mat-form-field appearance="fill" class="col-span-2">
-            <mat-label>{{"registerVet.confirmPassword" | translate}}</mat-label>
-            <input matInput type="password" id="confirmPassword" name="confirmPassword" [placeholder]="'register.placeholderConfirmPassword' | translate" />
-          </mat-form-field>
-        </div>
-
-        <button mat-raised-button color="accent" class="w-full max-w-md py-3 px-4 rounded" style="background-color: #2dd4bf;">
-          {{"registerVet.buttonRegister" | translate}}
-        </button><br><br>
-
-        <button mat-raised-button routerLink="/login" color="accent" class="w-full max-w-md py-3 px-4 rounded" style="background-color: #9a5d01;">
-          {{"registerVet.buttonLogin" | translate}}
-        </button>
-      </form>
+        <!-- Formulario de Cliente -->
+        <form *ngIf="selectedForm === 'cliente'" [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="mt-2">
+          <div class="grid grid-cols-2 gap-4">
+            <mat-form-field appearance="fill" class="col-span-1">
+              <mat-label>{{"registerCustomer.name" | translate}}</mat-label>
+              <input matInput type="text" formControlName="name" [placeholder]="'register.placeholderName' | translate" />
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="col-span-1">
+              <mat-label>{{"registerCustomer.DNI" | translate}}</mat-label>
+              <input matInput type="text" formControlName="dni" [placeholder]="'register.placeholderDNI' | translate" />
+            </mat-form-field>
+          </div>
+          <div class="grid grid-cols-1 gap-4">
+            <mat-form-field appearance="fill">
+              <mat-label>{{"registerCustomer.email" | translate}}</mat-label>
+              <input matInput type="email" formControlName="email" [placeholder]="'register.placeholderEmail' | translate" />
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>{{"registerCustomer.password" | translate}}</mat-label>
+              <input matInput type="password" formControlName="password" [placeholder]="'register.placeholderPassword' | translate" />
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>{{"registerCustomer.confirmPassword" | translate}}</mat-label>
+              <input matInput type="password" formControlName="confirmPassword" [placeholder]="'register.placeholderConfirmPassword' | translate" />
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>{{"registerCustomer.role" | translate}}</mat-label>
+              <mat-select formControlName="role">
+                <mat-option *ngFor="let role of roles" [value]="role.name">
+                  {{ role.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <button mat-raised-button color="accent" class="w-full max-w-md py-3 px-4 rounded" style="background-color: #2dd4bf;">
+            {{"registerCustomer.buttonRegister" | translate}}
+          </button><br><br>
+          <button mat-raised-button routerLink="/login" color="accent" class="w-full max-w-md py-3 px-4 rounded" style="background-color: #9a5d01;">
+            {{"registerCustomer.buttonLogin" | translate}}
+          </button>
+        </form>
+        <!-- Formulario de Empresa -->
+        <form *ngIf="selectedForm === 'empresa'" [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="mt-2">
+          <div class="grid grid-cols-2 gap-4 mb-4">
+            <mat-form-field appearance="fill" class="col-span-2">
+              <mat-label>{{"registerVet.name" | translate}}</mat-label>
+              <input matInput type="text" formControlName="name" [placeholder]="'register.placeholderNameVet' | translate" />
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="col-span-1">
+              <mat-label>{{"registerVet.email" | translate}}</mat-label>
+              <input matInput type="email" formControlName="email" [placeholder]="'register.placeholderEmail' | translate" />
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="col-span-1">
+              <mat-label>{{"registerVet.ruc" | translate}}</mat-label>
+              <input matInput type="text" formControlName="ruc" [placeholder]="'register.placeholderRUC' | translate" />
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="col-span-1">
+              <mat-label>{{"registerVet.phone" | translate}}</mat-label>
+              <input matInput type="text" formControlName="phone" [placeholder]="'register.placeholderPhone' | translate" />
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="col-span-1">
+              <mat-label>{{"registerVet.password" | translate}}</mat-label>
+              <input matInput type="password" formControlName="password" [placeholder]="'register.placeholderPassword' | translate" />
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="col-span-1">
+              <mat-label>{{"registerVet.confirmPassword" | translate}}</mat-label>
+              <input matInput type="password" formControlName="confirmPassword" [placeholder]="'register.placeholderConfirmPassword' | translate" />
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="col-span-1">
+              <mat-label>{{"registerVet.role" | translate}}</mat-label>
+              <mat-select formControlName="role">
+                <mat-option *ngFor="let role of roles" [value]="role.name">
+                  {{ role.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <button mat-raised-button color="accent" class="w-full max-w-md py-3 px-4 rounded" style="background-color: #2dd4bf;">
+            {{"registerVet.buttonRegister" | translate}}
+          </button><br><br>
+          <button mat-raised-button routerLink="/login" color="accent" class="w-full max-w-md py-3 px-4 rounded" style="background-color: #9a5d01;">
+            {{"registerVet.buttonLogin" | translate}}
+          </button>
+        </form>
+      </div>
     </div>
-  </div>
-
-
   </div>
 </div>

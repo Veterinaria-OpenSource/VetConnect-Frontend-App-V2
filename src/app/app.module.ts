@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { MatIcon } from '@angular/material/icon';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -107,6 +107,7 @@ import { SearchFilterComponent } from './user-pet/components/search-filter/searc
 import { FilterPipe } from './user-pet/pipes/filter.pipe';
 import { VetCenterReviewsComponent } from './user-pet/components/vet-center-reviews/vet-center-reviews.component';
 import { AuthGuard } from './authguard/auth.guard';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
 
 
 
@@ -206,7 +207,15 @@ export function createTranslateLoader(http: HttpClient) {
     MatDialogTitle,
     MatDialogClose,
   ],
-  providers: [provideAnimationsAsync(), VetCenterService, CurrencyPipe, AuthGuard],
+  providers: [
+    provideAnimationsAsync(),
+     VetCenterService,
+      CurrencyPipe,
+      AuthGuard,
+      {
+        provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true
+      }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
