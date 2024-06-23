@@ -1,18 +1,18 @@
 <mat-card class="example-card">
   <mat-card-header>
-    <mat-card-title> <h2>{{ vetCenter.clinicName }}</h2></mat-card-title>
+    <mat-card-title> <h2>{{ vetCenter.name }}</h2></mat-card-title>
     <mat-card-subtitle>***** 233 Reviews</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image [src]="vetCenter.image" [alt]="vetCenter.clinicName" />
+  <img mat-card-image [src]="vetCenter.imageProfile" [alt]="vetCenter.imageProfile" />
   <mat-card-content>
-    <p>{{'VetCard.Address' | translate }}: {{ vetCenter.direction }}</p>
+    <p>{{'VetCard.Address' | translate }}: {{ vetCenter.phone }}</p>
     <p>
       <span>{{'VetCard.Consulta' | translate}}</span>
-      <span>{{ vetCenter.clinicalPrice | currency: 'PEN '}}</span>
+      <span>{{ vetCenter.id | currency: 'PEN '}}</span>
     </p>
     <p>
       <span>{{'VetCard.Banio' | translate}}</span>
-      <span>{{ vetCenter.bathprice | currency: 'PEN '}}</span>
+      <span>{{ vetCenter.id | currency: 'PEN '}}</span>
     </p>
   </mat-card-content>
   <mat-card-actions style="display: flex; gap: 3rem; justify-content: center">

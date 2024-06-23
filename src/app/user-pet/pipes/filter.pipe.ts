@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { IVetCenter } from '../models/vet-center.entity';
+import { IVetCenter } from '../models/vet-centers/vet-center.entity';
 
 @Pipe({
   name: 'filter'
@@ -18,7 +18,7 @@ export class FilterPipe implements PipeTransform {
 
     search = search.toLowerCase();
     return vetCenters.filter(vetCenters => {
-      return vetCenters.clinicName.toLowerCase().includes(search);
+      return vetCenters.name.toLowerCase().includes(search);
     });
   }
 

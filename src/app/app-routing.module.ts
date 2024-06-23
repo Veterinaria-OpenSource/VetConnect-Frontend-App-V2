@@ -1,3 +1,4 @@
+// src/app/app-routing.module.ts
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './public/pages/login/login.component';
@@ -9,25 +10,28 @@ import { ProfileDetailsComponent } from './user-pet/pages/profile-details/profil
 import { VetCenterDetailComponent } from './user-pet/pages/vet-center-detail/vet-center-detail.component';
 import { CalendarPlatformComponent } from './user-vet/pages/calendar-platform/calendar-platform.component';
 import { TransactionsComponent } from './user-vet/pages/transactions/transactions.component';
+import { AuthGuard } from './authguard/auth.guard';  // Importa el guardia de autenticación
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   {
     path: 'vet-centers/:id',
     component: VetCenterDetailComponent,
+    canActivate: [AuthGuard],
   },
-  { path: 'profile', component: ProfileDetailsComponent },
-  { path: 'faq', component: FaqPolityComponent },
+  { path: 'profile', component: ProfileDetailsComponent, canActivate: [AuthGuard] },
+  { path: 'faq', component: FaqPolityComponent, canActivate: [AuthGuard] },
   { path: 'register', component: RegisterComponent },
-  { path: 'calendar-platform', component: CalendarPlatformComponent },
+  { path: 'calendar-platform', component: CalendarPlatformComponent, canActivate: [AuthGuard] },
   {
     path: 'payment/:id',
     component: PaymentComponent,
+    canActivate: [AuthGuard],
   },
-  { path: 'transactions', component: TransactionsComponent },
-  { path: '**', redirectTo: 'login' }, // Add this line to redirect all other routes to login
+  { path: 'transactions', component: TransactionsComponent, canActivate: [AuthGuard] },
+  { path: '**', redirectTo: 'login' }, // Redirige todas las demás rutas a login
 ];
 
 @NgModule({
