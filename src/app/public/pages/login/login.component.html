@@ -18,7 +18,7 @@
           <button mat-raised-button type="submit" color="accent" class="w-full max-w-md py-3 px-4 rounded" style="background-color: #2dd4bf;">
             {{ "login.buttonLogin" | translate }}
           </button><br>
-          <button mat-raised-button type="button" (click)="signUp()" color="accent" class="w-full max-w-md py-3 px-4 rounded" style="background-color: #9a5d01;">
+          <button type="button" (click)="signUp()" color="accent" class="w-full max-w-md py-3 px-4 rounded" style="background-color: #9a5d01; color: white;" routerLink="/register">
             {{ "login.buttonRegister" | translate }}
           </button>
         </form>

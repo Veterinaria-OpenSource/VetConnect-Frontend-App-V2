@@ -106,6 +106,7 @@ import { CardInsuranceComponent } from './user-pet/components/card-insurance/car
 import { SearchFilterComponent } from './user-pet/components/search-filter/search-filter.component';
 import { FilterPipe } from './user-pet/pipes/filter.pipe';
 import { VetCenterReviewsComponent } from './user-pet/components/vet-center-reviews/vet-center-reviews.component';
+import { AuthGuard } from './authguard/auth.guard';
 
 
 
@@ -205,7 +206,7 @@ export function createTranslateLoader(http: HttpClient) {
     MatDialogTitle,
     MatDialogClose,
   ],
-  providers: [provideAnimationsAsync(), VetCenterService, CurrencyPipe],
+  providers: [provideAnimationsAsync(), VetCenterService, CurrencyPipe, AuthGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
