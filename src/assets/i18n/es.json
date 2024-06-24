@@ -61,7 +61,8 @@
     "VetCard":{
         "Address": "Direccion",
         "Consulta": "Consulta Clinica",
-        "Banio": "Baño"
+        "Banio": "Baño",
+        "phone": "Telefono"
     },
 
     "TimeCard":{
