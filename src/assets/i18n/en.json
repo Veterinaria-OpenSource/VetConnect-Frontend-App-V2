@@ -60,7 +60,8 @@
     "VetCard":{
         "Address": "Address",
         "Consulta": "Clinical Consultation",
-        "Banio": "Bathroom"
+        "Banio": "Bathroom",
+        "phone": "Phone"
     },
 
     "TimeCard":{
