@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { IVetCenter } from '../../models/vet-center.entity';
+import { IVetCenter } from '../../models/vet-centers/vet-center.entity';
 import { VetCenterService } from '../../services/vet-center.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class VetCenterDetailComponent implements OnInit {
   vetCenter: IVetCenter = {} as IVetCenter;
 
   // arrays de opiniones (provicional)
-  reviews = [
+  /*reviews = [
     {
       reviewerName: 'Isabel Noriega Torres',
       date: new Date(2023, 3, 1), // Año, mes (0 indexado), día
@@ -24,7 +24,7 @@ export class VetCenterDetailComponent implements OnInit {
       date: new Date(2023, 3, 2),
       comment: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     }
-  ];
+  ];*/
   
   constructor(
     private route: ActivatedRoute,
