@@ -1,6 +1,6 @@
 // src/app/authguard/auth.guard.ts
 import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot, Router, RouterStateSnapshot } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
 import { AuthenticationService } from '../shared/services/authentication.service';
 
 @Injectable({
@@ -21,13 +21,13 @@ export class AuthGuard implements CanActivate {
       return false;
     }
 
-    // Check if role is present and matches the expected role
-    if (role && expectedRole && role === expectedRole) {
-      return true;
+    // Check if role matches the expected role, if defined
+    if (expectedRole && role !== expectedRole) {
+      this.router.navigate(['/access-denied']);
+      return false;
     }
 
-    // Redirect to access-denied page if the role does not match
-    this.router.navigate(['/access-denied']);
-    return false;
+    // Allow access if token is valid and role (if defined) matches
+    return true;
   }
 }

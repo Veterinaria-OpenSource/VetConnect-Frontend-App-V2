@@ -18,7 +18,6 @@ const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'home', component: HomeComponent, canActivate: [AuthGuard], data: { role: 'ROLE_USER' } },
   { path: 'user-dashboard', component: HomeComponent, canActivate: [AuthGuard], data: { role: 'ROLE_USER' } },
   { path: 'vet-dashboard', component: CalendarPlatformComponent, canActivate: [AuthGuard], data: { role: 'ROLE_VET' } },
   { path: 'profile', component: ProfileDetailsComponent, canActivate: [AuthGuard] },
