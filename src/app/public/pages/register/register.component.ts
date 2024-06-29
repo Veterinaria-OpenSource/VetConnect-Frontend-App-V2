@@ -9,84 +9,84 @@ import { Router } from '@angular/router';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent implements OnInit {
-  selectedForm = 'cliente'; // Default to 'cliente'
-  registerForm: FormGroup;
-  roles: any[] = [];
+export class RegisterComponent {
+  // selectedForm = 'cliente'; // Default to 'cliente'
+  // registerForm: FormGroup;
+  // roles: any[] = [];
 
-  constructor(
-    private fb: FormBuilder,
-    private registerService: RegisterService,
-    private roleService: RoleService,
-    private router: Router
-  ) {
-    this.registerForm = this.fb.group({
-      name: ['', Validators.required],
-      dni: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required],
-      confirmPassword: ['', Validators.required],
-      role: ['', Validators.required]
-    }, { validator: this.passwordMatchValidator });
-  }
+  // constructor(
+  //   private fb: FormBuilder,
+  //   private registerService: RegisterService,
+  //   private roleService: RoleService,
+  //   private router: Router
+  // ) {
+  //   this.registerForm = this.fb.group({
+  //     name: ['', Validators.required],
+  //     dni: ['', Validators.required],
+  //     email: ['', [Validators.required, Validators.email]],
+  //     password: ['', Validators.required],
+  //     confirmPassword: ['', Validators.required],
+  //     role: ['', Validators.required]
+  //   }, { validator: this.passwordMatchValidator });
+  // }
 
-  ngOnInit() {
-    this.loadRoles();
-  }
+  // ngOnInit() {
+  //   this.loadRoles();
+  // }
 
-  loadRoles() {
-    this.roleService.getRoles().subscribe({
-      next: (roles) => {
-        this.roles = roles;
-      },
-      error: (err) => {
-        console.error('Error loading roles: ', err);
-      }
-    });
-  }
+  // loadRoles() {
+  //   this.roleService.getRoles().subscribe({
+  //     next: (roles) => {
+  //       this.roles = roles;
+  //     },
+  //     error: (err) => {
+  //       console.error('Error loading roles: ', err);
+  //     }
+  //   });
+  // }
 
-  toggleForm(formType: string) {
-    this.selectedForm = formType;
+  // toggleForm(formType: string) {
+  //   this.selectedForm = formType;
 
-    if (formType === 'cliente') {
-      this.registerForm = this.fb.group({
-        name: ['', Validators.required],
-        dni: ['', Validators.required],
-        email: ['', [Validators.required, Validators.email]],
-        password: ['', Validators.required],
-        confirmPassword: ['', Validators.required],
-        role: ['ROLE_USER', Validators.required] // Default role for customer
-      }, { validator: this.passwordMatchValidator });
-    } else {
-      this.registerForm = this.fb.group({
-        name: ['', Validators.required],
-        email: ['', [Validators.required, Validators.email]],
-        ruc: ['', Validators.required],
-        phone: ['', Validators.required],
-        password: ['', Validators.required],
-        confirmPassword: ['', Validators.required],
-        role: ['ROLE_VET', Validators.required] // Default role for vet
-      }, { validator: this.passwordMatchValidator });
-    }
-  }
+  //   if (formType === 'cliente') {
+  //     this.registerForm = this.fb.group({
+  //       name: ['', Validators.required],
+  //       dni: ['', Validators.required],
+  //       email: ['', [Validators.required, Validators.email]],
+  //       password: ['', Validators.required],
+  //       confirmPassword: ['', Validators.required],
+  //       role: ['ROLE_USER', Validators.required] // Default role for customer
+  //     }, { validator: this.passwordMatchValidator });
+  //   } else {
+  //     this.registerForm = this.fb.group({
+  //       name: ['', Validators.required],
+  //       email: ['', [Validators.required, Validators.email]],
+  //       ruc: ['', Validators.required],
+  //       phone: ['', Validators.required],
+  //       password: ['', Validators.required],
+  //       confirmPassword: ['', Validators.required],
+  //       role: ['ROLE_VET', Validators.required] // Default role for vet
+  //     }, { validator: this.passwordMatchValidator });
+  //   }
+  // }
 
-  passwordMatchValidator(formGroup: FormGroup) {
-    return formGroup.get('password')?.value === formGroup.get('confirmPassword')?.value
-      ? null : { mismatch: true };
-  }
+  // passwordMatchValidator(formGroup: FormGroup) {
+  //   return formGroup.get('password')?.value === formGroup.get('confirmPassword')?.value
+  //     ? null : { mismatch: true };
+  // }
 
-  onSubmit(): void {
-    if (this.registerForm.valid) {
-      const formData = this.registerForm.value;
+  // onSubmit(): void {
+  //   if (this.registerForm.valid) {
+  //     const formData = this.registerForm.value;
 
-      this.registerService.registerUser(formData).subscribe({
-        next: () => {
-          this.router.navigate(['/login']);
-        },
-        error: (err) => {
-          console.error('Registration error: ', err);
-        }
-      });
-    }
-  }
+  //     this.registerService.registerUser(formData).subscribe({
+  //       next: () => {
+  //         this.router.navigate(['/login']);
+  //       },
+  //       error: (err) => {
+  //         console.error('Registration error: ', err);
+  //       }
+  //     });
+  //   }
+  // }
 }

@@ -1,0 +1,7 @@
+<div class="error-container">
+    <img src="assets/img/page-not-found.png">
+    <h1><span>{{ 'pageNotFound.title' | translate }}</span></h1>
+    <p>{{'pageNotFound.description' | translate }}</p>
+    <p> {{'pageNotFound.path' | translate}}<b>{{invalidUrl}}</b>{{'pageNotFound.invalidPath' | translate}}</p>
+    <button mat-button (click)="redirectToHome()">{{'pageNotFound.backHome' | translate}}</button>
+  </div>

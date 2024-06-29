@@ -1,19 +1,25 @@
+// src/app/authguard/auth.guard.ts
 import { Injectable } from '@angular/core';
-import { CanActivate, Router } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
+import { AuthenticationService } from '../shared/services/authentication.service';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  constructor(private router: Router) {}
 
-  canActivate(): boolean {
-    const token = localStorage.getItem('token');
-    if (token) {
+  constructor(private authenticationService: AuthenticationService, private router: Router) {}
+
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+    const role = this.authenticationService.getRole();
+    const expectedRole = route.data['role'];
+
+    if (role && expectedRole && role === expectedRole) {
       return true;
-    } else {
-      this.router.navigate(['/login']);
-      return false;
     }
+
+    // Redirige al login si el usuario no tiene el rol adecuado
+    this.router.navigate(['/login']);
+    return false;
   }
 }
