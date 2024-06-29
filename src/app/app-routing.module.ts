@@ -12,6 +12,7 @@ import { CalendarPlatformComponent } from './user-vet/pages/calendar-platform/ca
 import { TransactionsComponent } from './user-vet/pages/transactions/transactions.component';
 import { AuthGuard } from './authguard/auth.guard';  // Importa el guardia de autenticación
 import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
+import { AccessDeniedComponent } from './public/pages/access-denied/access-denied.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -33,6 +34,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   { path: 'transactions', component: TransactionsComponent, canActivate: [AuthGuard], data: { role: 'ROLE_VET' } },
+  { path: 'access-denied', component: AccessDeniedComponent },
   { path: '**', component: PageNotFoundComponent }, // Redirige todas las demás rutas a login
 ];
 

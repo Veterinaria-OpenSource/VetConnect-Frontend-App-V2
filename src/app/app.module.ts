@@ -111,6 +111,7 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { FormLoginComponent } from './public/components/form-login/form-login.component';
 import { FormRegisterComponent } from './public/components/form-register/form-register.component';
 import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
+import { AccessDeniedComponent } from './public/pages/access-denied/access-denied.component';
 
 
 
@@ -152,6 +153,7 @@ export function createTranslateLoader(http: HttpClient) {
     FormLoginComponent,
     FormRegisterComponent,
     PageNotFoundComponent,
+    AccessDeniedComponent,
   ],
   imports: [
     ReactiveFormsModule,
