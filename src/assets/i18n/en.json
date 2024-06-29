@@ -80,5 +80,14 @@
     "Insurance": {
         "title" : "Insurance",
         "description" : "Protect your furry best friend with our pet insurance! In a world full of surprises, insure the health and well-being of your four-legged companion. Our insurance offers comprehensive coverage for veterinary expenses, from routine visits to unexpected emergencies. Plus, we give you peace of mind with additional benefits such as liability coverage and 24-hour answering services. Don't leave your pet's health to chance!"
-    }
+    },
+
+    "pageNotFound": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist.",
+    "path": "path",
+    "invalidPath": "Invalid path",
+    "backHome": "Home"
+
+  }
 }

@@ -108,6 +108,9 @@ import { FilterPipe } from './user-pet/pipes/filter.pipe';
 import { VetCenterReviewsComponent } from './user-pet/components/vet-center-reviews/vet-center-reviews.component';
 import { AuthGuard } from './authguard/auth.guard';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { FormLoginComponent } from './public/components/form-login/form-login.component';
+import { FormRegisterComponent } from './public/components/form-register/form-register.component';
+import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
 
 
 
@@ -146,6 +149,9 @@ export function createTranslateLoader(http: HttpClient) {
     SearchFilterComponent,
     FilterPipe,
     VetCenterReviewsComponent,
+    FormLoginComponent,
+    FormRegisterComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     ReactiveFormsModule,
@@ -206,6 +212,7 @@ export function createTranslateLoader(http: HttpClient) {
     MatDialogContent,
     MatDialogTitle,
     MatDialogClose,
+    ReactiveFormsModule,
   ],
   providers: [
     provideAnimationsAsync(),
