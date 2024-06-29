@@ -5,7 +5,7 @@ import { catchError, Observable, retry, throwError } from 'rxjs';
   providedIn: 'root',
 })
 export class BaseService<T> {
-  basePath: string = 'https://vetconnect.azurewebsites.net/api/v1/';
+  basePath: string = 'https://vetconnect.azurewebsites.net/api/v1';
   resourceEndpoint: string = '';
 
   httpOptions = {

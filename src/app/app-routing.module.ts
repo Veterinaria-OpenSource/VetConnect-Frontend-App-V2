@@ -11,27 +11,29 @@ import { VetCenterDetailComponent } from './user-pet/pages/vet-center-detail/vet
 import { CalendarPlatformComponent } from './user-vet/pages/calendar-platform/calendar-platform.component';
 import { TransactionsComponent } from './user-vet/pages/transactions/transactions.component';
 import { AuthGuard } from './authguard/auth.guard';  // Importa el guardia de autenticación
+import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'register', component: RegisterComponent },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard], data: { role: 'ROLE_USER' } },
+  { path: 'user-dashboard', component: HomeComponent, canActivate: [AuthGuard], data: { role: 'ROLE_USER' } },
+  { path: 'vet-dashboard', component: CalendarPlatformComponent, canActivate: [AuthGuard], data: { role: 'ROLE_VET' } },
+  { path: 'profile', component: ProfileDetailsComponent, canActivate: [AuthGuard] },
+  { path: 'faq', component: FaqPolityComponent, canActivate: [AuthGuard] },
   {
     path: 'vet-centers/:id',
     component: VetCenterDetailComponent,
     canActivate: [AuthGuard],
   },
-  { path: 'profile', component: ProfileDetailsComponent, canActivate: [AuthGuard] },
-  { path: 'faq', component: FaqPolityComponent, canActivate: [AuthGuard] },
-  { path: 'register', component: RegisterComponent },
-  { path: 'calendar-platform', component: CalendarPlatformComponent, canActivate: [AuthGuard] },
   {
     path: 'payment/:id',
     component: PaymentComponent,
     canActivate: [AuthGuard],
   },
-  { path: 'transactions', component: TransactionsComponent, canActivate: [AuthGuard] },
-  { path: '**', redirectTo: 'login' }, // Redirige todas las demás rutas a login
+  { path: 'transactions', component: TransactionsComponent, canActivate: [AuthGuard], data: { role: 'ROLE_VET' } },
+  { path: '**', component: PageNotFoundComponent }, // Redirige todas las demás rutas a login
 ];
 
 @NgModule({
