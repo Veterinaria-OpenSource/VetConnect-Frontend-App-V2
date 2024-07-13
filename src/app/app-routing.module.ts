@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard], data: { role: 'ROLE_USER' } },
   { path: 'user-dashboard', component: HomeComponent, canActivate: [AuthGuard], data: { role: 'ROLE_USER' } },
   { path: 'vet-dashboard', component: CalendarPlatformComponent, canActivate: [AuthGuard], data: { role: 'ROLE_VET' } },
   { path: 'profile', component: ProfileDetailsComponent, canActivate: [AuthGuard] },
@@ -26,6 +27,9 @@ const routes: Routes = [
     path: 'vet-centers/:id',
     component: VetCenterDetailComponent,
     canActivate: [AuthGuard],
+    children: [
+      
+    ]
   },
   {
     path: 'payment/:id',
@@ -33,10 +37,9 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   { path: 'transactions', component: TransactionsComponent, canActivate: [AuthGuard], data: { role: 'ROLE_VET' } },
-  { path: 'access-denied', component: AccessDeniedComponent },
-  { path: '**', component: PageNotFoundComponent }, // Redirige todas las demás rutas a login
+  { path: 'access-denied', component: PageNotFoundComponent },
+  { path: '**', redirectTo: 'login' }
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
