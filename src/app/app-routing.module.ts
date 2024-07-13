@@ -13,7 +13,6 @@ import { TransactionsComponent } from './user-vet/pages/transactions/transaction
 import { AuthGuard } from './authguard/auth.guard';  // Importa el guardia de autenticación
 import { PageNotFoundComponent } from './public/pages/page-not-found/page-not-found.component';
 import { AccessDeniedComponent } from './public/pages/access-denied/access-denied.component';
-import { AddReviewComponent } from './user-pet/components/add-review/add-review.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -29,7 +28,7 @@ const routes: Routes = [
     component: VetCenterDetailComponent,
     canActivate: [AuthGuard],
     children: [
-      { path: 'add-review', component: AddReviewComponent, canActivate: [AuthGuard], data: { role: 'ROLE_USER' } }
+      
     ]
   },
   {
